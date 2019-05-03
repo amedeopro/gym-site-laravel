@@ -36,6 +36,7 @@ Route::resource('/trainers','TrainerController')->middleware('auth');
 Route::resource('/swimtrainers','Swim_TrainerController')->middleware('auth');
 Route::resource('/courses','CourseController')->middleware('auth');
 Route::resource('/posts','PostController')->middleware('auth');
+Route::resource('/dates','DateController')->middleware('auth');
 Route::get('/visualizzatrainers', 'TrainerController@trainers_admin')->name('trainers.visualizza');
 Route::get('/','PostController@index_home')->name('home');
 Route::get('/corsifitness', 'CourseController@visualizza_corsi')->name('corsifitness');

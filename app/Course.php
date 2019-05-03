@@ -11,4 +11,8 @@ class Course extends Model
   public function trainers(){
     return $this->belongsToMany(Trainer::class)->withTimestamps();
   }
+
+  public function dates(){
+    return $this->belongsToMany(Date::class)->withTimestamps();
+  }
 }

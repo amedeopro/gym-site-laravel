@@ -32,6 +32,14 @@
               <textarea class="form-control" name="description_course" rows="8" cols="80"></textarea>
             </div>
 
+            <p>Quando viene svolto questo corso ?</p>
+            @foreach ($dates as $date)
+              <div class="form-check form-check-inline mb-3">
+                <input name="date_id[]" class="form-check-input" type="checkbox" value="{{$date->id}}">
+                <label class="form-check-label" for="date_id">{{$date->day}} {{$date->hour}}</label>
+              </div>
+            @endforeach
+
             <div class="custom-file">
               <input type="file" class="custom-file-input" name="logo_course">
               <label class="custom-file-label" for="logo_course">Scegli il logo</label>

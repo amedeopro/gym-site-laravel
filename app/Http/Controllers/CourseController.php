@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Course;
+use App\Date;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -34,7 +35,8 @@ class CourseController extends Controller
      */
     public function create()
     {
-        return view('courses.create');
+        $dates = Date::all();
+        return view('courses.create', compact('dates'));
     }
 
     /**
@@ -63,6 +65,8 @@ class CourseController extends Controller
 
         $newCourse->save();
 
+        $newCourse->dates()->attach($data['date_id']);
+
         return redirect()->route('courses.index');
     }
 
@@ -86,7 +90,8 @@ class CourseController extends Controller
     public function edit($id)
     {
         $course = Course::find($id);
-        return view('courses.edit', compact('course'));
+        $dates = Date::all();
+        return view('courses.edit', compact('course','dates'));
     }
 
     /**
@@ -105,8 +110,10 @@ class CourseController extends Controller
 
         $data['logo_course'] = $image;
         $data['bg_image'] = $bgimage;
-        
+
         $course->update($data);
+
+        $course->dates()->sync($data['date_id']);
 
         return redirect()->route('courses.index');
 

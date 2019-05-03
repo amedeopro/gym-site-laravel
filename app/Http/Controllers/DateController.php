@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Date;
 
 class DateController extends Controller
 {
@@ -13,7 +14,8 @@ class DateController extends Controller
      */
     public function index()
     {
-        //
+        $dates = Date::all();
+        return view('dates.index',compact('dates'));
     }
 
     /**
@@ -23,7 +25,8 @@ class DateController extends Controller
      */
     public function create()
     {
-        //
+        $dates = Date::all();
+        return view('dates.create',compact('dates'));
     }
 
     /**
@@ -34,7 +37,16 @@ class DateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newDate = New Date();
+
+        $newDate->day = $data['day'];
+        $newDate->hour = $data['hour'];
+
+        $newDate->save();
+
+        return redirect()->route('dates.index');
     }
 
     /**

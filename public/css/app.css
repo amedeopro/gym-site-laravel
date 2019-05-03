@@ -11899,6 +11899,16 @@ a.text-dark:focus {
   color: #E67D3B;
 }
 
+.date-delete {
+  color: red;
+  font-size: 35px;
+}
+
+.date-delete a {
+  text-decoration: none;
+  color: red;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }

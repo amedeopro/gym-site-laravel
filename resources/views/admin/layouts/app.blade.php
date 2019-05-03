@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Admin - SportFly</title>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <link rel="stylesheet" href="{{ asset('css/animate.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
   </head>
   <body>
@@ -79,6 +81,8 @@
           <a href="{{route('courses.index')}}"><i class="far fa-eye"></i> Visualizza corsi</a>
           <a href="{{route('posts.create')}}"><i class="fas fa-pen-fancy"></i> Inserisci articolo</a>
           <a href="{{route('posts.index')}}"><i class="far fa-eye"></i> Visualizza articoli</a>
+          <a href="{{route('dates.create')}}"><i class="far fa-clock"></i> Inserisci orario</a>
+          <a href="{{route('dates.index')}}"><i class="far fa-eye"></i> Visualizza orari</a>
         </div>
       </div>
     </div>
