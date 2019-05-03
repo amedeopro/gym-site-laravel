@@ -19,7 +19,9 @@ class CourseController extends Controller
      public function visualizza_corsi(){
        $coursesnolm = Course::all()->where('lesmills','0');
        $courseslm = Course::all()->where('lesmills','1');
-       return view('corsi_fitness.index',compact('coursesnolm','courseslm'));
+       $course = Course::all();
+       $dates = Date::all();
+       return view('corsi_fitness.index',compact('coursesnolm','courseslm','dates','course'));
      }
 
     public function index()
