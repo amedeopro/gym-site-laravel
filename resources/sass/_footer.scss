@@ -1,0 +1,60 @@
+.footer-sport-fly{
+  background: black;
+  height: 100%;
+  .widget-1{
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 450px;
+      img{
+        max-width: 300px;
+      }
+  }
+  .widget-2{
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 450px;
+  }
+
+  .widget-3{
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 450px;
+  .widget-3-testo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  }
+  }
+  .txt-final-footer{
+    background: black;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .footer-sport-fly{
+  .widget-1, .widget-2, .widget-3{
+    text-align: center;
+    height: 200px;
+  }
+ }
+}

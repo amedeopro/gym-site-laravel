@@ -1,0 +1,27 @@
+.bg-admin{
+  background: lightgrey;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.left-admin{
+  text-align: center;
+  height: 250px;
+  a{
+    padding: 10px 25px;
+    text-decoration: none;
+    color: $light-orange-sportfly
+  }
+}
+
+.titolo-gestione-articoli{
+  h1{
+    overflow-y: hidden;
+    font-weight: 700;
+    color: #666;
+    span{
+      color: $light-orange-sportfly;
+    }
+  }
+}

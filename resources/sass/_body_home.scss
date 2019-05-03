@@ -1,0 +1,368 @@
+
+
+.slider{
+  width: 100%;
+  height: auto;
+  background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('http://www.actionclub.info/wp-content/uploads/2018/05/2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  .testo-slider{
+    width: 100%;
+    height: 100%;
+    padding: 220px 0;
+  }
+  h1,p{
+    text-transform: uppercase;
+    color: white;
+    overflow-y: hidden
+  }
+  h1{
+    font-size: 47px;
+  }
+  p{
+    font-size: 22px;
+  }
+  a{
+    text-decoration: none;
+    background: $orange-sportfly;
+    color: white;
+    font-size: 30px;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.btn-us{
+  width: 100%;
+  height: 100px;
+  padding: 5px 20px 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2{
+    // font-size: 35px;
+    font-weight: 700;
+    color: white;
+  }
+  i{
+    color: white;
+    font-size: 40px;
+    margin-left: 25px;
+  }
+}
+
+.orange{
+  background: $orange-sportfly;
+}
+.lightorange{
+  background: $light-orange-sportfly;
+}
+.lightgrey{
+  background: lightgrey;
+}
+
+
+.contenuto-1{
+  width: 100%;
+  height: auto;
+
+}
+
+.left-home-servizio{
+  float: left;
+  background: url('https://media1.popsugar-assets.com/files/thumbor/gNPMqznk7wYWIs_g8w9QWDeIg-c/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/01/18/748/n/1922729/tmp_g13kI4_210fdc7e610ec25d_GettyImages-891326080.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-height: 350px;
+  height: auto;
+}
+
+.right-home-servizio{
+  float: right;
+  height: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1{
+    text-transform: uppercase;
+    font-size: 45px;
+
+    span{
+      color: #666;
+    }
+  }
+  p{
+    font-size: 18px;
+    text-align: justify;
+  }
+}
+
+.att-cors{
+  height: auto; //250px
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.attivita-corsi{
+
+  .att-corsi-title{
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 62px;
+    color: #666;
+    span{
+      font-weight: 700;
+      color: #333;
+    }
+  }
+  .att-corsi-descrizione{
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #333;
+  }
+}
+
+.allenamenti, .gruppo, .personal-trainer, .nuoto{
+  height: 450px;
+}
+
+.allenamenti{
+  background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/img/rieducazione-funzionale.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &:hover{
+    transition: all .5s;
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  h1{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+  }
+  p{
+    color: white;
+  }
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 5px 20px;
+  }
+}
+
+.gruppo{
+  background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('http://www.actionclub.info/wp-content/uploads/2018/05/2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &:hover{
+    transition: all .5s;
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  h1{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+  }
+  p{
+    color: white;
+  }
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 5px 20px;
+  }
+}
+
+.personal-trainer{
+  background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://www.fitnessesport.it/wp-content/uploads/2016/02/personal-trainer-testa.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &:hover{
+    transition: all .5s;
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  h1{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+  }
+  p{
+    color: white;
+  }
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 5px 20px;
+  }
+}
+
+.nuoto{
+  background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('http://www.centropagina.it/wp-content/uploads/2017/09/Nuoto-Fitness.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &:hover{
+    transition: all .5s;
+    transform: scale(1.1);
+    z-index: 1;
+
+  }
+  h1{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+  }
+  p{
+    color: white;
+  }
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 5px 20px;
+  }
+}
+
+.prova-corsi{
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .txt-prova-corsi{
+    font-size: 50px;
+    color: #666;
+    text-transform: uppercase;
+    line-height: 40px;
+    height: auto;
+    span{
+      color: #333;
+      font-size: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      height: auto;
+    }
+  }
+  a{
+    margin-top: 45px;
+    text-decoration: none;
+    background: $light-orange-sportfly;
+    color: white;
+    font-size: 25px;
+    padding: 10px 25px;
+    border-radius: 20px;
+  }
+}
+
+.bg-prova-corsi{
+  background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('http://www.movimenticreativi.it/wp-content/uploads/2018/11/fitness.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    width: 400px;
+  }
+}
+
+.news{
+  h1{
+    font-weight: 700;
+    color: #666;
+    overflow-y: hidden;
+  }
+}
+
+.news-box{
+
+  img{
+    max-height: 300px;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  p{
+    text-align: justify;
+  }
+  h5{
+    margin: 20px 0;
+  }
+}
+
+.btn-blog-sportfly{
+  text-decoration: none;
+  color: white;
+  background: $light-orange-sportfly;
+  padding: 10px 35px;
+  font-weight: 700;
+  border-radius: 10px;
+  &:hover{
+    text-decoration: none;
+    background: white;
+    color: $light-orange-sportfly;
+    border: 2px solid $light-orange-sportfly;
+    border-radius: 10px;
+  }
+}

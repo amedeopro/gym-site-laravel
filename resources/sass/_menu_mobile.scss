@@ -1,0 +1,103 @@
+.menu-mobile{
+  display: none;
+  height: 100%;
+  text-align: center;
+  line-height: 120px;
+  a{
+    text-decoration: none;
+    color: black;
+    i{
+      font-size: 35px;
+      margin-right: 35px;
+      color: black;
+    }
+  }
+}
+
+@media only screen and (max-width : 1400px) { //768px
+
+  .pre-header{
+    display: none;
+
+  }
+
+  .allinea-logo{
+    text-align: center !important;
+  }
+
+  .slider{
+    text-align: center;
+    .testo-slider{
+      a{
+        margin-top: 25px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .right-home-servizio{
+    h1{
+      text-align: center;
+    }
+  }
+
+  .menu-mobile{
+    display: block;
+  }
+
+  .pulsante-box{
+    display: none;
+  }
+
+  .prova-corsi{
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    .txt-prova-corsi{
+      font-size: 50px;
+      color: #666;
+      text-transform: uppercase;
+      line-height: 40px;
+      height: auto;
+      overflow: hidden;
+      span{
+        color: #333;
+        font-size: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+        height: auto;
+      }
+    }
+    a{
+      margin-top: 45px;
+      text-decoration: none;
+      background: $light-orange-sportfly;
+      color: white;
+      font-size: 25px;
+      padding: 10px 25px;
+      border-radius: 20px;
+    }
+  }
+
+  .box-corsi-ext{
+    margin-bottom: 35px;
+  }
+
+  .box-nuoto{
+    padding: 15px 50px !important;
+    border-bottom: 3px dotted $light-orange-sportfly;
+    border-right: 1px solid white !important;
+    &:last-child{
+      border-bottom: 0.5px solid white;
+    }
+  }
+
+  .btn-us{
+    h2 {
+      font-size: 35px !important;
+    }
+  }
+}

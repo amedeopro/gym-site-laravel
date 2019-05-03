@@ -1,0 +1,16 @@
+.image-single-trainer{
+  img{
+    border-radius: 100px;
+    border: 10px solid white;
+    box-shadow: 6px 7px 11px lightgrey;
+  }
+}
+
+.text-single-trainer{
+  span:first-child{
+    color: $light-orange-sportfly;
+  }
+  p{
+    text-align: justify;
+  }
+}

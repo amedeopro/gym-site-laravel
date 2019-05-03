@@ -1,0 +1,31 @@
+
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//partials
+@import '_header';
+@import '_menu_mobile';
+@import '_body_home';
+@import '_corsi_fitness';
+@import '_trainers';
+@import '_single_trainer';
+@import '_nuoto';
+@import '_footer';
+@import '_admin';
+
+*{
+// overflow-x: hidden;
+font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}

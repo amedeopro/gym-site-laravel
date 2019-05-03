@@ -1,0 +1,188 @@
+
+.background-nuoto{
+    background: url('/img/nuoto.jpg');
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    img{
+      width: 50%;
+    }
+}
+
+.bk-nuoto-bimbi{
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('/img/nuoto-bambini.jpg');
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.bk-nuoto-baby{
+    background: linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('/img/baby-piscina.jpg');
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.display-ok{
+  display: inline-block;
+}
+
+#titolo-bambini{
+  color: white;
+  font-weight: 700;
+  color: white;
+}
+
+#testo-bambini{
+  display: none;
+  color: white;
+  font-size: 20px;
+  padding: 0 30px;
+}
+
+#titolo-baby{
+  color: white;
+  font-weight: 700;
+  color: white;
+}
+
+#testo-baby{
+  display: none;
+  color: white;
+  font-size: 20px;
+  padding: 0 30px;
+}
+
+.box-nuoto{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 3px dotted $light-orange-sportfly;
+  margin: 20px 0;
+  padding: 0 50px;
+  text-align: center;
+  h1{
+    color: $blue-sportfly;
+    font-weight: 700;
+  }
+  p{
+      font-size: 22px;
+      color: #666;
+    }
+
+  a{
+    text-decoration: none;
+    background: $blue-sportfly;
+    color: white;
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 20px 40px;
+    font-size: 22px;
+  }
+  &:last-child{
+    border-right: 0.5px solid white;
+  }
+}
+
+.corso-adulti{
+  height: 500px;
+  background: url('/img/corsi-nuoto-adulti.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.corso-adulti-txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 35px;
+  text-align: center;
+  h1{
+    color: #666;
+    font-weight: 700;
+    span{
+      color: $blue-sportfly;
+    }
+  }
+  p{
+    font-size: 22px;
+  }
+}
+
+.bk-individuali{
+  background: linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/img/individuale.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1{
+    color: white;
+    font-weight: 700;
+    span{
+      color: $blue-sportfly;
+    }
+  }
+  p{
+    font-size: 22px;
+    color: white;
+  }
+}
+
+.corso-agonistica{
+  height: 500px;
+  background: url('/img/agonistica.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.corso-propaganda{
+  height: 500px;
+  background: url('/img/propaganda.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.corso-agonistica-txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 35px;
+  text-align: center;
+  h1{
+    color: #666;
+    font-weight: 700;
+    span{
+      color: $blue-sportfly;
+    }
+  }
+  p{
+    font-size: 22px;
+  }
+}

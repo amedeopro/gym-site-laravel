@@ -1,0 +1,128 @@
+.pre-header{
+  background: lightgrey;
+  width: 100%;
+  height: 40px;
+  .pre-header-left{
+    float: left;
+    width: 50%;
+    height: 100%;
+    line-height: 40px;
+    padding: 0 20px;
+    a{
+      text-decoration: none;
+      color: grey;
+    }
+  }
+
+  .pre-header-right{
+    float: right;
+    width: 50%;
+    height: auto;
+    line-height: 40px;
+    text-align: right;
+    padding: 0 20px;
+    a{
+      color: grey;
+      text-decoration: none;
+    }
+    ul{
+      list-style: none;
+      li{
+        display: inline-block;
+        margin: 0 10px;
+        color: grey;
+        a{
+          text-decoration: none;
+        }
+      }
+      li:first-child{
+        margin: 0 5px;
+        color: grey;
+      }
+      li:last-child{
+        margin-right:5px;
+        margin-left:10px;
+        color: grey;
+      }
+    }
+  }
+}
+
+.header-menu{
+  width: 100%;
+  height: 120px;
+  .header-menu-left{
+    width: 60%;
+    height: 100%;
+  }
+  .header-menu-left{
+    float: left;
+    width: 60%;
+    height: 100%;
+    padding-left: 25px;
+  }
+  .header-menu-right{
+    float: right;
+    width: 40%;
+    height: 100%;
+    line-height: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .pulsante-box{
+      width: calc(100% / 4);
+      height: 100%;
+      overflow-y: hidden;
+      a{
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+  }
+}
+
+.allinea-logo{
+  text-align: left !important;
+}
+
+.pulsanti-header{
+
+  a{
+
+    font-weight: 700 !important;
+    font-size: 16px !important;
+  }
+
+}
+
+.orange-btn{
+  color: orange !important;
+}
+.lightorange-btn{
+  color: $light-orange-sportfly !important;
+}
+.darkorange-btn{
+  color: $orange-sportfly !important;
+}
+.blue-btn{
+  color: $blue-sportfly !important;
+}
+
+// .orange-pulsante{
+//   background: orange !important;
+//   height: 100px;
+// }
+// .lightorange-pulsante{
+//   background: $light-orange-sportfly !important;
+// }
+// .darkorange-pulsante{
+//   background: $orange-sportfly !important;
+// }
+// .blue-pulsante{
+//   background: $blue-sportfly !important;
+// }

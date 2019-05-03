@@ -1,0 +1,256 @@
+.slider-fitness{
+    height: 650px;
+    background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    background-image: url('/img/fitness-slider.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+      color: white;
+      font-size: 47px;
+      font-weight: 700;
+      span{
+        color: $light-orange-sportfly;
+      }
+    }
+    p{
+      color: white;
+      font-size: 18px;
+      line-height: 15px;
+      overflow-y: hidden;
+    }
+}
+
+.slider-fitness-txt{
+  width: 50%;
+}
+
+.fitness-img{
+  background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('http://www.actionclub.info/wp-content/uploads/2018/05/2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 350px;
+}
+
+
+.box-corsi-title{
+  text-align: center;
+  padding: 35px 0;
+  h1{
+    color: #666;
+    font-weight: 700;
+  }
+}
+
+.box-corsi-title-sf{
+  text-align: center;
+  padding: 35px 0;
+  h1{
+    color: #666;
+    font-weight: 700;
+    text-transform: uppercase;
+    span{
+      color: $light-orange-sportfly
+    }
+  }
+}
+
+.box-corsi{
+  position: relative;
+  text-align: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #666;
+
+    span{
+      color: $light-orange-sportfly;
+    }
+  }
+
+  .logo-lm{
+    max-width: 180px;
+    max-height: 56px;
+    margin-bottom: 10px;
+  }
+
+  p{
+    font-size: 18px;
+  }
+}
+
+
+.box-corsi-ext{
+  position: relative;
+  text-align: center;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(180deg, #F8FAFC 50%, $light-orange-sportfly 50%);
+  color: white;
+
+  // background-color: $light-orange-sportfly;
+
+  img{
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    border: 10px solid white;
+    box-shadow: 1px 0px 11px lightgrey;
+  }
+  h3{
+    margin: 20px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 19px;
+    span{
+      color: #FFF;
+    }
+
+  }
+
+
+
+  .logo-lm{
+    max-width: 180px;
+    max-height: 56px;
+    margin-bottom: 10px;
+  }
+
+  p{
+    font-size: 18px;
+  }
+
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    background: white;
+    color: $light-orange-sportfly;
+    padding: 10px 25px;
+    border-radius: 10px;
+    &:hover{
+      background: $light-orange-sportfly;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 25px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.bodypump{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cxwork{
+  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('https://lmimirror3pvr.azureedge.net/static/media/7751/f54cb6b5-54f3-439e-8132-5925e1fbc756/june-2017-cxworx-social-tile.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bodybalance{
+  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('https://www.lesmills.com.au/sites/default/files/2017-03/High%20Res%20JPG%20%2810%29_0.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tone{
+  background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('https://lmimirror3pvr.azureedge.net/static/media/11178/f261a7c7-8c47-4a05-b917-78168bea6868/tone-lp-960x540.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.visualizza-istruttori{
+  height: 350px;
+  background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('http://www.actionclub.info/wp-content/uploads/2018/05/2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:0px 0;
+  text-align: center;
+  a{
+    text-decoration: none;
+    color: white;
+    h1{
+      color: white;
+      font-weight: 700;
+      span{
+        color: $light-orange-sportfly;
+      }
+    }
+  }
+}
+
+.bodypump-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  img{
+    max-width: 50%;
+  }
+  p{
+    padding: 50px;
+    font-size: 30px;
+  }
+}
+
+.box-lesmills-footer{
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 3px dotted $light-orange-sportfly;
+  margin: 20px 0;
+  padding: 0 50px;
+  text-align: center;
+  h1{
+    color: $blue-sportfly;
+    font-weight: 700;
+  }
+
+    p{
+      font-size: 22px;
+      color: #666;
+    }
+
+  a{
+    text-decoration: none;
+    background: $blue-sportfly;
+    color: white;
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 20px 40px;
+    font-size: 22px;
+  }
+}
+
+.sportfly-grey{
+  color: #666;
+}
+
+.back-orange{
+  background: linear-gradient(180deg, #F8FAFC 50%, $light-orange-sportfly 50%);
+}
