@@ -20,8 +20,16 @@ class CourseController extends Controller
        $coursesnolm = Course::all()->where('lesmills','0');
        $courseslm = Course::all()->where('lesmills','1');
        $course = Course::all();
-       $dates = Date::all();
-       return view('corsi_fitness.index',compact('coursesnolm','courseslm','dates','course'));
+       $date = Date::wherenotnull('id')->with(['courses'])->get()->toArray();
+
+    // dd(
+    //   Date::wherenotnull('id')
+    //   ->with(['courses'])
+    //   ->get()
+    //   ->toArray()
+    // )   ;
+
+       return view('corsi_fitness.index',compact('coursesnolm','courseslm','date','course'));
      }
 
     public function index()

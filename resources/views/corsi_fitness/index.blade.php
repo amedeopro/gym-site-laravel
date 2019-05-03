@@ -2,6 +2,10 @@
 
 @section('content')
 
+@foreach ($date as $value)
+  {{dd($value)}}
+@endforeach
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12 col-md-12 slider-fitness">
