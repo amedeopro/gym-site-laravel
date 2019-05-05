@@ -11909,6 +11909,24 @@ a.text-dark:focus {
   color: red;
 }
 
+.right-single-course .pulsante {
+  text-align: center;
+}
+
+.right-single-course a {
+  text-decoration: none;
+  color: white;
+  background: #E67D3B;
+  border-radius: 10px;
+  padding: 10px 25px;
+}
+
+.right-single-course a:hover {
+  color: #E67D3B;
+  background: white;
+  border: 2px solid #E67D3B;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }

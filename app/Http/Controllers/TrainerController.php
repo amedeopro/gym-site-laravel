@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Trainer;
 use App\Course;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class TrainerController extends Controller
 {
@@ -52,6 +53,9 @@ class TrainerController extends Controller
     {
         $data = $request->all();
 
+        $name = $data['name'];
+        $fullname = $name.$data['surname'];
+
         $image = Storage::disk('public')->put('trainers', $data['image']);
 
         $newTrainer = New Trainer();
@@ -59,6 +63,7 @@ class TrainerController extends Controller
         $newTrainer->name = $data['name'];
         $newTrainer->surname = $data['surname'];
         $newTrainer->description = $data['description'];
+        $newTrainer->slug = Str::slug($fullname);
         $newTrainer->image = $image;
 
 
@@ -69,7 +74,7 @@ class TrainerController extends Controller
         $newTrainer->courses()->attach($data['course_id']);
 
 
-        return redirect()->route('trainers.admin');
+        return redirect()->route('trainers.index');
     }
 
     /**
@@ -86,7 +91,6 @@ class TrainerController extends Controller
       if (empty($trainer)) {
         return abort(404);
       }
-
 
       return view('trainers.show', compact('trainer','courses'));
     }

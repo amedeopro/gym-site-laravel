@@ -15,4 +15,12 @@ class Course extends Model
   public function dates(){
     return $this->belongsToMany(Date::class)->withTimestamps();
   }
+
+  public function days(){
+    return $this->belongsToMany(Day::class)->withTimestamps();
+  }
+
+  public function hours(){
+    return $this->belongsToMany(hour::class)->withTimestamps();
+  }
 }

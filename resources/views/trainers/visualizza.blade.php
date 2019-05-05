@@ -18,7 +18,7 @@
         <h3>{{$trainer->name}} {{$trainer->surname}}</h3>
         <p>{{Str::words($trainer->description, 10)}}</p>
 
-        <a href="{{route('trainers.show', $trainer->id)}}" class="btn btn-info mb-5">Scopri di più</a>
+        <a href="{{route('trainers.trainer_singolo', $trainer->slug)}}" class="btn btn-info mb-5">Scopri di più</a>
       </div>
     @endforeach
   </div>

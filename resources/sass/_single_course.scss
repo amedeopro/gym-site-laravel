@@ -1,0 +1,17 @@
+.right-single-course{
+  .pulsante{
+    text-align: center;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+    background: $light-orange-sportfly;
+    border-radius: 10px;
+    padding: 10px 25px;
+    &:hover{
+      color: $light-orange-sportfly;
+      background: white;
+      border: 2px solid $light-orange-sportfly;
+    }
+  }
+}

@@ -32,13 +32,58 @@
               <textarea class="form-control" name="description_course" rows="8" cols="80"></textarea>
             </div>
 
-            <p>Quando viene svolto questo corso ?</p>
-            @foreach ($dates as $date)
+            {{-- @foreach ($days as $day)
+              {{dd($day['day'])}}
+            @endforeach --}}
+
+
+            {{-- @foreach ($days as $day)
               <div class="form-check form-check-inline mb-3">
-                <input name="date_id[]" class="form-check-input" type="checkbox" value="{{$date->id}}">
-                <label class="form-check-label" for="date_id">{{$date->day}} {{$date->hour}}</label>
+                <input name="day_id[]" class="form-check-input" type="checkbox" value="{{$day->id}}">
+                <label class="form-check-label" for="day_id">{{$day->day}}</label>
+              </div>
+            @endforeach --}}
+
+            <div class="container mb-5">
+              <div class="row">
+                <div class="col-lg-6">
+                  <span>In quale giorno viene svolto questo corso ?</span>
+                  <select class="form-control" name="day_id[]">
+                    <option value="" selected> </option>
+                    @foreach ($days as $day)
+                    <option value="{{$day->id}}">{{$day->day}}</option>
+                    @endforeach
+                  </select>
+                </div>
+                <div class="col-lg-6">
+                  <span>In quale orario ?</span>
+                  <select class="form-control" name="hour_id[]">
+                    <option value="" selected> </option>
+                    @foreach ($hours as $hour)
+                    <option value="{{$hour->id}}">{{$hour->hour}}</option>
+                    @endforeach
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            {{-- @foreach ($days as $day)
+
+              <div class="form-check form-check-inline mb-3">
+                <input name="day_id[]" class="form-check-input" type="checkbox" value="{{$day->id}}">
+                <label class="form-check-label" for="day_id">{{$day->day}}</label>
               </div>
             @endforeach
+
+            <p>In quale orario ?</p>
+            @foreach ($hours as $hour)
+
+              <div class="form-check form-check-inline mb-3">
+                <input name="hour_id[]" class="form-check-input" type="checkbox" value="{{$hour->id}}">
+                <label class="form-check-label" for="hour_id">{{$hour->hour}}</label>
+              </div>
+            @endforeach --}}
+
 
             <div class="custom-file">
               <input type="file" class="custom-file-input" name="logo_course">

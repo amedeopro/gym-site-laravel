@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Course;
 use App\Date;
+use App\Day;
+use App\Hour;
+use App\Trainer;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -19,8 +22,10 @@ class CourseController extends Controller
      public function visualizza_corsi(){
        $coursesnolm = Course::all()->where('lesmills','0');
        $courseslm = Course::all()->where('lesmills','1');
-       $course = Course::all();
-       $date = Date::wherenotnull('id')->with(['courses'])->get()->toArray();
+       $courses = Course::all();
+       $dates = Date::wherenotnull('id')->with(['courses'])->get()->toArray();
+       $days = Day::all();
+       $hours = Hour::all();
 
     // dd(
     //   Date::wherenotnull('id')
@@ -29,7 +34,7 @@ class CourseController extends Controller
     //   ->toArray()
     // )   ;
 
-       return view('corsi_fitness.index',compact('coursesnolm','courseslm','date','course'));
+       return view('corsi_fitness.index',compact('coursesnolm','courseslm','dates','courses','days','hours'));
      }
 
     public function index()
@@ -46,7 +51,10 @@ class CourseController extends Controller
     public function create()
     {
         $dates = Date::all();
-        return view('courses.create', compact('dates'));
+        // $days = Day::wherenotnull('id')->with(['hours'])->get()->toArray();
+        $days = Day::all();
+        $hours = Hour::all();
+        return view('courses.create', compact('dates','days','hours'));
     }
 
     /**
@@ -75,7 +83,14 @@ class CourseController extends Controller
 
         $newCourse->save();
 
-        $newCourse->dates()->attach($data['date_id']);
+        // $newCourse->dates()->attach($data['date_id']);
+
+         if (!empty($data['day_id']) & !empty($data['hour_id'])) {
+          $newCourse->days()->attach($data['day_id']);
+
+          $newCourse->hours()->attach($data['hour_id']);
+         }
+
 
         return redirect()->route('courses.index');
     }
@@ -89,6 +104,14 @@ class CourseController extends Controller
     public function show($id)
     {
         //
+    }
+
+    public function corso_singolo($slug)
+    {
+      $courses = Course::where('slug',$slug)->with(['trainers'])->get()->toArray();
+      $trainers = Trainer::all();
+
+      return view('courses.corso_singolo', compact('trainers','courses'));
     }
 
     /**

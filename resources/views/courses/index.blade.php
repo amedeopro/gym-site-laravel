@@ -43,35 +43,35 @@
   <div class="container-fluid">
     <div class="row mb-5">
       @foreach ($courses as $course)
-        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
 
           <img class="image-responsive" src="{{asset('storage/'.$course->logo_course)}}" alt="" >
 
         </div>
 
-        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5">
 
           <h3>{{$course->name_course}}</h3>
 
         </div>
 
-        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5">
 
           <p>{{Str::words($course->description_course, 10)}}</p>
 
         </div>
 
-        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5">
 
           <a href="#" class="btn btn-primary">VISUALIZZA</a>
 
         </div>
-        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5">
 
           <a href="{{ route('courses.edit', $course->id)}}" class="btn btn-warning">MODIFICA</a>
 
         </div>
-        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5">
 
           <form action="{{route('courses.destroy', $course->id)}}" method="post">
             @csrf

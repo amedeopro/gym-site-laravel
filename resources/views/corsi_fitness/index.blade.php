@@ -1,10 +1,9 @@
+
 @extends('layouts.app')
 
 @section('content')
 
-@foreach ($date as $value)
-  {{dd($value)}}
-@endforeach
+
 
   <div class="container-fluid">
     <div class="row">
@@ -29,7 +28,7 @@
 
       @foreach ($courseslm as $courselesmilles)
         <div class="col-lg-3 col-md-12 col-sm-12 box-corsi bodypump pulse animated" style="background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('{{asset('storage/'.$courselesmilles->bg_image)}}');">
-          <a href="{{route('bodypump')}}"><img class="logo-lm" src="{{asset('storage/'.$courselesmilles->logo_course)}}" alt=""></a>
+          <a href="{{route('courses.corso_singolo', $courselesmilles->slug)}}"><img class="logo-lm" src="{{asset('storage/'.$courselesmilles->logo_course)}}" alt=""></a>
         </div>
       @endforeach
 
@@ -56,7 +55,7 @@
           <img src="{{asset('storage/'.$coursenolesmilles->logo_course)}}" alt="" data-aos="flip-left">
           <h3>{{$coursenolesmilles->name_course}}</h3>
           <p>{{Str::words($coursenolesmilles->description_course, 10)}}</p>
-          <a href="#">scopri di più</a>
+          <a href="{{route('courses.corso_singolo', $coursenolesmilles->slug)}}">scopri di più</a>
         </div>
       @endforeach
 
@@ -71,13 +70,18 @@
     </div>
   </div>
 
-  <div class="container">
+  {{-- <div class="container">
     <div class="row">
       <div class="col-lg-12">
-
+        @foreach ($dates as $date)
+          <p>{{$date['day']}} {{$date['hour']}}</p>
+          @foreach ($date['courses'] as $value)
+            <p>{{$value['name_course']}}</p>
+          @endforeach
+        @endforeach
       </div>
     </div>
-  </div>
+  </div> --}}
 
   <div class="container-fluid">
     <div class="row">
@@ -87,60 +91,24 @@
           <thead>
             <tr>
               <th scope="col"></th>
-              <th scope="col">Lunedi</th>
-              <th scope="col">Martedi</th>
-              <th scope="col">Mercoledi</th>
-              <th scope="col">Giovedi</th>
-              <th scope="col">Venerdi</th>
-              <th scope="col">Sabato</th>
+              @foreach ($days as $day)
+
+                  <th scope="col">{{$day->day}}</th>
+
+            @endforeach
             </tr>
           </thead>
           <tbody>
+            @foreach ($dates as $date)
             <tr>
-              <th scope="row">9:30</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <th scope="row">{{$date['hour']}}</th>
+              @foreach ($date['courses'] as $value)
+                {{-- {{dd($value['pivot'])}} --}}
+              <td>{{$value['name_course']}}</td>
+
             </tr>
-            <tr>
-              <th scope="row">10:00</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">10:15</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">10:30</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">13:30</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
+          @endforeach
+        @endforeach
           </tbody>
         </table>
       </div>
