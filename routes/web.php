@@ -23,9 +23,9 @@ Route::get('/nuoto', function () {
     return view('nuoto.index');
 })->name('nuoto');
 
-Route::get('/bodypump', function () {
-    return view('corsi_fitness.bodypump');
-})->name('bodypump');
+Route::get('/rieducazionefunzionale', function () {
+    return view('rieducazione_funzionale');
+})->name('rieducazionefunzionale');
 
 Route::get('/admin', function () {
     return view('admin.index');

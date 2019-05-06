@@ -23,9 +23,9 @@
           <p>{{$course['description_course']}}</p>
           <h4>Istruttori che seguono il corso di {{$course['name_course']}}</h4>
           @foreach ($course['trainers'] as $value)
-            <p><a href="{{route('trainers.show', $value['id'])}}">{{$value['name']}} {{$value['surname']}}</a></p>
+            <p><a class="istruttore-su-corsi" href="{{route('trainers.trainer_singolo', $value['slug'])}}">{{$value['name']}} {{$value['surname']}}</a></p>
           @endforeach
-          <div class="pulsante">
+          <div class="pulsante mt-5">
             <a href="#">Richiedi una prova gratuita</a>
           </div>
         </div>

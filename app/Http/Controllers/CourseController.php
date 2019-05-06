@@ -85,11 +85,11 @@ class CourseController extends Controller
 
         // $newCourse->dates()->attach($data['date_id']);
 
-         if (!empty($data['day_id']) & !empty($data['hour_id'])) {
-          $newCourse->days()->attach($data['day_id']);
-
-          $newCourse->hours()->attach($data['hour_id']);
-         }
+         // if (!empty($data['day_id']) & !empty($data['hour_id'])) {
+         //  $newCourse->days()->attach($data['day_id']);
+         //
+         //  $newCourse->hours()->attach($data['hour_id']);
+         // }
 
 
         return redirect()->route('courses.index');
@@ -146,7 +146,7 @@ class CourseController extends Controller
 
         $course->update($data);
 
-        $course->dates()->sync($data['date_id']);
+        // $course->dates()->sync($data['date_id']);
 
         return redirect()->route('courses.index');
 

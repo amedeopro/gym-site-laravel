@@ -44,7 +44,7 @@
               </div>
             @endforeach --}}
 
-            <div class="container mb-5">
+            {{-- <div class="container mb-5">
               <div class="row">
                 <div class="col-lg-6">
                   <span>In quale giorno viene svolto questo corso ?</span>
@@ -65,7 +65,7 @@
                   </select>
                 </div>
               </div>
-            </div>
+            </div> --}}
 
             {{-- @foreach ($days as $day)
 

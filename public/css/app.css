@@ -11927,6 +11927,19 @@ a.text-dark:focus {
   border: 2px solid #E67D3B;
 }
 
+.right-single-course .istruttore-su-corsi {
+  background: white;
+  border-radius: 0;
+  border: 0;
+  color: #E67D3B;
+  font-weight: 500;
+}
+
+.right-single-course .istruttore-su-corsi:hover {
+  border: 0;
+  color: #E5973C;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }

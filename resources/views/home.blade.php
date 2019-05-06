@@ -92,7 +92,7 @@
     <div class="col-lg-3 col-md-12 allenamenti" data-aos="zoom-in">
       <h1>Rieducazione Funzionale</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a href="#">scopri di piÙ</a>
+      <a href="{{route('rieducazionefunzionale')}}">scopri di piÙ</a>
     </div>
     <div class="col-lg-3 col-md-12 nuoto" data-aos="zoom-in">
       <h1>Nuoto</h1>
