@@ -34,14 +34,6 @@ class CourseController extends Controller
        $schedulesVenerdi = Schedule::all()->where('day','Venerdì');
        $schedulesSabato = Schedule::all()->where('day','Sabato');
 
-
-    // dd(
-    //   Date::wherenotnull('id')
-    //   ->with(['courses'])
-    //   ->get()
-    //   ->toArray()
-    // )   ;
-
        return view('corsi_fitness.index',compact('coursesnolm','courseslm','dates','courses','days','hours','schedulesLunedi','schedulesMartedi','schedulesMercoledi','schedulesGiovedi','schedulesVenerdi','schedulesSabato'));
      }
 
