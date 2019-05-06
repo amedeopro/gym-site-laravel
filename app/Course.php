@@ -12,9 +12,9 @@ class Course extends Model
     return $this->belongsToMany(Trainer::class)->withTimestamps();
   }
 
-  public function dates(){
-    return $this->belongsToMany(Date::class)->withTimestamps();
-  }
+  // public function dates(){
+  //   return $this->belongsToMany(Date::class)->withTimestamps();
+  // }
 
   public function days(){
     return $this->belongsToMany(Day::class)->withTimestamps();

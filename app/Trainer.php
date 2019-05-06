@@ -14,4 +14,12 @@ class Trainer extends Model
       return $this->belongsToMany(Course::class)->withTimestamps();
     }
 
+    public function hours(){
+      return $this->belongsToMany(Hour::class)->withTimestamps();
+    }
+
+    public function days(){
+      return $this->belongsToMany(Day::class)->withTimestamps();
+    }
+
 }

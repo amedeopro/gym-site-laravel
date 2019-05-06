@@ -20,7 +20,11 @@
         <h3>{{$date->hour}}</h3>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 text-center date-delete d-flex justify-content-center align-items-center">
-        <a href="#"><i class="fas fa-times" ></i></a>
+        <form action="{{route('dates.destroy', $date->id)}}" method="post">
+          @csrf
+          @method('DELETE')
+          <input type="submit" class="btn btn-danger" value="Elimina">
+        </form>
       </div>
       @endforeach
     </div>

@@ -91,6 +91,8 @@ class DateController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $date = Date::find($id);
+      $date->delete();
+      return redirect()->back();
     }
 }

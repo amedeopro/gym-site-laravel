@@ -54,7 +54,8 @@ class CourseController extends Controller
         // $days = Day::wherenotnull('id')->with(['hours'])->get()->toArray();
         $days = Day::all();
         $hours = Hour::all();
-        return view('courses.create', compact('dates','days','hours'));
+        $trainers = Trainer::all();
+        return view('courses.create', compact('dates','days','hours','trainers'));
     }
 
     /**
@@ -83,12 +84,12 @@ class CourseController extends Controller
 
         $newCourse->save();
 
-        // $newCourse->dates()->attach($data['date_id']);
+        //$newCourse->day()->attach($data['date_id']);
 
          // if (!empty($data['day_id']) & !empty($data['hour_id'])) {
-         //  $newCourse->days()->attach($data['day_id']);
-         //
-         //  $newCourse->hours()->attach($data['hour_id']);
+          $newCourse->days()->attach($data['day_id']);
+          $newCourse->hours()->attach($data['hour_id']);
+          $newCourse->trainers()->attach($data['trainer_id']);
          // }
 
 
@@ -146,7 +147,7 @@ class CourseController extends Controller
 
         $course->update($data);
 
-        // $course->dates()->sync($data['date_id']);
+        $course->dates()->sync($data['date_id']);
 
         return redirect()->route('courses.index');
 

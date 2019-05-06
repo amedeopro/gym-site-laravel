@@ -33,6 +33,45 @@
             </div>
 
             {{-- @foreach ($days as $day)
+              <div class="form-check form-check-inline mb-3">
+                <input name="day_id[]" class="form-check-input" type="checkbox" value="{{$day->id}}">
+                <label class="form-check-label" for="day_id">{{$day->day}}</label>
+              </div>
+            @endforeach --}}
+
+            <div class="container mb-5">
+              <div class="row">
+                <div class="col-lg-4">
+                  <span>In quale giorno viene svolto questo corso ?</span>
+                  <select class="form-control" name="day_id[]">
+                    <option value="" selected> </option>
+                    @foreach ($days as $day)
+                    <option value="{{$day->id}}">{{$day->day}}</option>
+                    @endforeach
+                  </select>
+                </div>
+                <div class="col-lg-4">
+                  <span>In quale orario ?</span>
+                  <select class="form-control" name="hour_id[]">
+                    <option value="" selected> </option>
+                    @foreach ($hours as $hour)
+                    <option value="{{$hour->id}}">{{$hour->hour}}</option>
+                    @endforeach
+                  </select>
+                </div>
+                <div class="col-lg-4">
+                  <span>Scegli l'istruttore</span>
+                  <select class="form-control" name="trainer_id[]">
+                    <option value="" selected> </option>
+                    @foreach ($trainers as $trainer)
+                    <option value="{{$trainer->id}}">{{$trainer->name}} {{$trainer->surname}}</option>
+                    @endforeach
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            {{-- @foreach ($days as $day)
               {{dd($day['day'])}}
             @endforeach --}}
 
