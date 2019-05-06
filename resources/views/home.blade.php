@@ -129,8 +129,8 @@
       <div class="col-lg-4 col-md-12 col-sm-12 news-box mb-5">
         <img src="{{asset('storage/'.$post->image_post)}}" alt="">
         <h5>{{$post->title}}</h5>
-        <p>{!! $post->content !!}</p>
-        <a href="#" class="btn-blog-sportfly">Leggi</a>
+        <p>{!!Str::words($post->content, 20)!!}</p>
+        <a href="{{route('posts.visualizza_singolo_post', $post->slug)}}" class="btn-blog-sportfly">Leggi</a>
       </div>
     @endforeach
   </div>

@@ -11571,6 +11571,8 @@ a.text-dark:focus {
   border: 10px solid white;
   box-shadow: 6px 7px 11px lightgrey;
   margin-bottom: 25px;
+  max-width: 160px;
+  max-height: 160px;
 }
 
 .admin-trainers {
@@ -11997,6 +11999,11 @@ a.text-dark:focus {
 
 .ora-corso h6 {
   font-weight: 700;
+}
+
+.image-single-post img {
+  max-width: 100%;
+  margin: 25px 0;
 }
 
 * {

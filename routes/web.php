@@ -44,6 +44,7 @@ Route::get('/visualizzatrainers/{slug}', 'GeneralController@trainer_singolo')->n
 Route::get('/','PostController@index_home')->name('home');
 Route::get('/corsifitness', 'CourseController@visualizza_corsi')->name('corsifitness');
 Route::get('/corsifitness/{slug}', 'CourseController@corso_singolo')->name('courses.corso_singolo');
+Route::get('/posts/sg/{slug}','GeneralController@visualizza_post_singolo')->name('posts.visualizza_singolo_post');
 
 
 
