@@ -8,6 +8,7 @@ use App\Date;
 use App\Day;
 use App\Hour;
 use App\Trainer;
+use App\Schedule;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -26,6 +27,13 @@ class CourseController extends Controller
        $dates = Date::wherenotnull('id')->with(['courses'])->get()->toArray();
        $days = Day::all();
        $hours = Hour::all();
+       $schedulesLunedi = Schedule::all()->where('day','Lunedì');
+       $schedulesMartedi = Schedule::all()->where('day','Martedì');
+       $schedulesMercoledi = Schedule::all()->where('day','Mercoledì');
+       $schedulesGiovedi = Schedule::all()->where('day','Giovedì');
+       $schedulesVenerdi = Schedule::all()->where('day','Venerdì');
+       $schedulesSabato = Schedule::all()->where('day','Sabato');
+
 
     // dd(
     //   Date::wherenotnull('id')
@@ -34,7 +42,7 @@ class CourseController extends Controller
     //   ->toArray()
     // )   ;
 
-       return view('corsi_fitness.index',compact('coursesnolm','courseslm','dates','courses','days','hours'));
+       return view('corsi_fitness.index',compact('coursesnolm','courseslm','dates','courses','days','hours','schedulesLunedi','schedulesMartedi','schedulesMercoledi','schedulesGiovedi','schedulesVenerdi','schedulesSabato'));
      }
 
     public function index()

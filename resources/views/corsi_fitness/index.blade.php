@@ -71,6 +71,95 @@
   </div>
 
 
+  <div class="container-fluid mb-5">
+    <div class="row">
+      <div class="col-lg-2 schedules">
+        <h5>Lunedì</h5>
+
+        @foreach ($schedulesLunedi as $lunedi)
+          <div class="ora-corso">
+            <h6>{{$lunedi->hour}}</h6>
+          </div>
+          <div class="info-corso">
+            <p>{{$lunedi->course}}</p>
+            <p>{{$lunedi->trainer}}</p>
+          </div>
+        @endforeach
+      </div>
+      <div class="col-lg-2 schedules">
+        <h5>Martedì</h5>
+
+        @foreach ($schedulesMartedi as $martedi)
+          <div class="ora-corso">
+            <h6>{{$martedi->hour}}</h6>
+          </div>
+          <div class="info-corso">
+            <p>{{$martedi->course}}</p>
+            <p>{{$martedi->trainer}}</p>
+          </div>
+        @endforeach
+      </div>
+
+      <div class="col-lg-2 schedules">
+        <h5>Mercoledì</h5>
+
+        @foreach ($schedulesMercoledi as $mercoledi)
+          <div class="ora-corso">
+            <h6>{{$mercoledi->hour}}</h6>
+          </div>
+          <div class="info-corso">
+            <p>{{$mercoledi->course}}</p>
+            <p>{{$mercoledi->trainer}}</p>
+          </div>
+        @endforeach
+      </div>
+
+      <div class="col-lg-2 schedules">
+        <h5>Giovedì</h5>
+
+        @foreach ($schedulesGiovedi as $giovedi)
+          <div class="ora-corso">
+            <h6>{{$giovedi->hour}}</h6>
+          </div>
+          <div class="info-corso">
+            <p>{{$giovedi->course}}</p>
+            <p>{{$giovedi->trainer}}</p>
+          </div>
+        @endforeach
+      </div>
+
+      <div class="col-lg-2 schedules">
+        <h5>Venerdì</h5>
+
+        @foreach ($schedulesVenerdi as $venerdi)
+          <div class="ora-corso">
+            <h6>{{$venerdi->hour}}</h6>
+          </div>
+          <div class="info-corso">
+            <p>{{$venerdi->course}}</p>
+            <p>{{$venerdi->trainer}}</p>
+          </div>
+        @endforeach
+      </div>
+
+      <div class="col-lg-2 schedules">
+        <h5>Sabato</h5>
+
+        @foreach ($schedulesSabato as $sabato)
+          <div class="ora-corso">
+            <h6>{{$sabato->hour}}</h6>
+          </div>
+          <div class="info-corso">
+            <p>{{$sabato->course}}</p>
+            <p>{{$sabato->trainer}}</p>
+          </div>
+        @endforeach
+      </div>
+
+    </div>
+  </div>
+
+
   {{-- <div class="container">
     <div class="row">
       <div class="col-lg-12">

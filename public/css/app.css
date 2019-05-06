@@ -11989,6 +11989,16 @@ a.text-dark:focus {
   height: 350px;
 }
 
+.ora-corso,
+.info-corso {
+  width: calc(100% / 2);
+  display: block;
+}
+
+.ora-corso h6 {
+  font-weight: 700;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }
