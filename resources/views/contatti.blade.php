@@ -1,17 +1,21 @@
+{{-- @extends('layouts.app')
+
+@section('content')
+
+@endsection --}}
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>SportFly</title>
+    <title>Sportfly - Contatti</title>
+    {!! $map['js'] !!}
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <link rel="stylesheet" href="{{ asset('css/animate.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script>document.getElementsByTagName("html")[0].className += " js";</script>
-
   </head>
   <body>
-
     <div class="pre-header overflow-hidden">
 
         <div class="pre-header-left">
@@ -60,7 +64,49 @@
       </div>
 
 
-    @yield('content')
+    {!! $map['html'] !!}
+
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-lg-12">
+          <form class="form-group" action="{{route('hours.store')}}" method="post" enctype="multipart/form-data">
+              @csrf
+              @method('POST')
+
+              <div class="form-group">
+                <label for="email">Il tuo indirizzo email</label>
+                <input type="text" class="form-control" name="email" placeholder="Inserisci la tua mail" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Il tuo numero di telefono</label>
+                <input type="text" class="form-control" name="phone" placeholder="Inserisci il tuo numero di telefono" required>
+              </div>
+
+              <div class="form-group">
+                <label for="object">Per cosa ci contatti</label>
+                <input type="text" class="form-control" name="object" placeholder="Oggetto">
+              </div>
+
+              <div class="form-group">
+                <label for="message">Messaggio</label>
+                <textarea name="message" rows="8" cols="80" class="form-control"></textarea>
+              </div>
+
+              <div class="form-group">
+                <input type="checkbox" name="privacy" value="privacy accettata" required>
+                <label for="privacy">Accetta il trattamento dei dati personali</label>
+              </div>
+
+
+              <div class="form-group">
+                <input type="submit" class="form-control" value="INVIA">
+              </div>
+
+            </form>
+        </div>
+      </div>
+    </div>
 
     <script src="js/app.js" charset="utf-8"></script>
 

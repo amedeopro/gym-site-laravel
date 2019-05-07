@@ -31,6 +31,25 @@ Route::get('/admin', function () {
     return view('admin.index');
 })->name('admin')->middleware('auth');
 
+Route::get('/contatti', function () {
+  $config['center'] = '41.710657,13.604054';
+  $config['zoom'] = '16';
+  //$config['width'] = '500';
+  $config['scrollwheel'] = false;
+  // $config['position'] = ;
+
+  GMaps::initialize($config);
+
+//se ne possono mettere molteplici di marker basta copiare da 44 a 48
+  // $marker['position'] = '41.710657,13.604054';
+  $marker['infowindows_content'] = 'mettere del testo';
+  GMaps::add_marker($marker);
+
+  $map = GMaps::create_map();
+
+    return view('contatti')->with('map', $map);
+})->name('contatti');
+
 
 Route::resource('/trainers','TrainerController')->middleware('auth');
 Route::resource('/swimtrainers','Swim_TrainerController')->middleware('auth');
