@@ -66,6 +66,25 @@
 
     {!! $map['html'] !!}
 
+    <div class="container mt-5 mb-3">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 col-sm-12 logo-contatti text-center d-flex justify-content-center align-items-center">
+          <img src="{{asset('img/logo-sportfly-new.png')}}" alt="">
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 pl-5 informazioni-varie-contatti d-flex justify-content-center flex-column">
+          <p>Via Ponte Marziano,1 <i class="fas fa-road"></i></p>
+          <p>03039 Sora, FR <i class="fas fa-map-marked-alt"></i></p>
+          <p>+39 0776 123456 <i class="fas fa-phone"></i></p>
+          <p>+39 347 1234567 <i class="fab fa-whatsapp"></i></p>
+          <p>Email info@sportfly.it <i class="fas fa-envelope"></i></p>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 p-5 contattaci-right">
+          <h2>CONTATTACI</h2>
+          <p>Per qualsiasi informazione o richiesta non esitare a contattarci, il nostro STAFF sarà lieto di risponderti entro 24h</p>
+        </div>
+      </div>
+    </div>
+
     <div class="container mt-5 mb-5">
       <div class="row">
         <div class="col-lg-12">

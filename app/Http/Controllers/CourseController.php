@@ -27,14 +27,24 @@ class CourseController extends Controller
        $dates = Date::wherenotnull('id')->with(['courses'])->get()->toArray();
        $days = Day::all();
        $hours = Hour::all();
-       $schedulesLunedi = Schedule::all()->where('day','Lunedì');
-       $schedulesMartedi = Schedule::all()->where('day','Martedì');
-       $schedulesMercoledi = Schedule::all()->where('day','Mercoledì');
-       $schedulesGiovedi = Schedule::all()->where('day','Giovedì');
-       $schedulesVenerdi = Schedule::all()->where('day','Venerdì');
-       $schedulesSabato = Schedule::all()->where('day','Sabato');
 
-       return view('corsi_fitness.index',compact('coursesnolm','courseslm','dates','courses','days','hours','schedulesLunedi','schedulesMartedi','schedulesMercoledi','schedulesGiovedi','schedulesVenerdi','schedulesSabato'));
+       //fitness a
+       $schedulesLunedi = Schedule::all()->where('day','Lunedì')->where('room','fitness a');
+       $schedulesMartedi = Schedule::all()->where('day','Martedì')->where('room','fitness a');
+       $schedulesMercoledi = Schedule::all()->where('day','Mercoledì')->where('room','fitness a');
+       $schedulesGiovedi = Schedule::all()->where('day','Giovedì')->where('room','fitness a');
+       $schedulesVenerdi = Schedule::all()->where('day','Venerdì')->where('room','fitness a');
+       $schedulesSabato = Schedule::all()->where('day','Sabato')->where('room','fitness a');
+
+       //fitness b
+       $schedulesLunedib = Schedule::all()->where('day','Lunedì')->where('room','fitness b');
+       $schedulesMartedib = Schedule::all()->where('day','Martedì')->where('room','fitness b');
+       $schedulesMercoledib = Schedule::all()->where('day','Mercoledì')->where('room','fitness b');
+       $schedulesGiovedib = Schedule::all()->where('day','Giovedì')->where('room','fitness b');
+       $schedulesVenerdib = Schedule::all()->where('day','Venerdì')->where('room','fitness b');
+       $schedulesSabatob = Schedule::all()->where('day','Sabato')->where('room','fitness b');
+
+       return view('corsi_fitness.index',compact('coursesnolm','courseslm','dates','courses','days','hours','schedulesLunedi','schedulesMartedi','schedulesMercoledi','schedulesGiovedi','schedulesVenerdi','schedulesSabato','schedulesLunedib','schedulesMartedib','schedulesMercoledib','schedulesGiovedib','schedulesVenerdib','schedulesSabatob'));
      }
 
     public function index()

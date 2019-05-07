@@ -11882,7 +11882,7 @@ a.text-dark:focus {
 
 .left-admin {
   text-align: center;
-  height: 250px;
+  height: 200px;
 }
 
 .left-admin a {
@@ -12004,6 +12004,17 @@ a.text-dark:focus {
 .image-single-post img {
   max-width: 100%;
   margin: 25px 0;
+}
+
+.contattaci-right h2 {
+  font-weight: 700;
+  color: #666;
+}
+
+.informazioni-varie-contatti i {
+  color: #E67D3B;
+  margin-left: 10px;
+  font-size: 1rem;
 }
 
 * {

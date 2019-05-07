@@ -72,7 +72,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 left-admin">
-          <div class="col-lg-12 text-center mb-5 mt-5">
+          <div class="col-lg-12 text-center mb-3 mt-5">
             <img src="{{asset('img/logo-sportfly-new.png')}}" alt="">
           </div>
 
@@ -81,46 +81,57 @@
     </div>
     <div class="container-fluid mb-5">
       <div class="row">
-        <div class="col-lg-3">
-          <a href="{{route('trainers.create')}}"><i class="fas fa-user-plus"></i> Inserisci istruttore</a>
+        <div class="col-lg-6">
+          <div class="col-lg-4">
+            <a href="{{route('trainers.create')}}"><i class="fas fa-user-plus"></i> Inserisci istruttore</a>
+
+          </div>
+          <div class="col-lg-4">
+            <a href="{{route('courses.create')}}"><i class="fas fa-dumbbell"></i> Inserisci corso</a>
+
+          </div>
+          <div class="col-lg-4">
+            <a href="{{route('posts.create')}}"><i class="fas fa-pen-fancy"></i> Inserisci articolo</a>
+
+          </div>
+          <div class="col-lg-4">
+
+            <a href="{{route('schedules.create')}}"><i class="far fa-clock"></i> Inserisci orario</a>
+          </div>
+          <div class="col-lg-4">
+            <a href="{{route('hours.create')}}"><i class="far fa-clock"></i> Inserisci fascia oraria</a>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="col-lg-4">
+            <a href="{{route('trainers.index')}}"><i class="far fa-eye"></i> Visualizza istruttori</a>
+
+          </div>
+
+          <div class="col-lg-4">
+
+            <a href="{{route('courses.index')}}"><i class="far fa-eye"></i> Visualizza corsi</a>
+          </div>
+
+          <div class="col-lg-4">
+            <a href="{{route('posts.index')}}"><i class="far fa-eye"></i> Visualizza articoli</a>
+
+          </div>
+
+          <div class="col-lg-4">
+            <a href="{{route('schedules.index')}}"><i class="far fa-eye"></i> Visualizza orari</a>
+
+          </div>
+
+          <div class="col-lg-4">
+            <a href="{{route('hours.index')}}"><i class="far fa-eye"></i> Visualizza fascia oraria</a>
+
+          </div>
 
         </div>
-        <div class="col-lg-3">
-          <a href="{{route('trainers.index')}}"><i class="far fa-eye"></i> Visualizza istruttori</a>
 
-        </div>
-        <div class="col-lg-3">
-          <a href="{{route('courses.create')}}"><i class="fas fa-dumbbell"></i> Inserisci corso</a>
-
-        </div>
-        <div class="col-lg-3">
-
-          <a href="{{route('courses.index')}}"><i class="far fa-eye"></i> Visualizza corsi</a>
-        </div>
-        <div class="col-lg-3">
-          <a href="{{route('posts.create')}}"><i class="fas fa-pen-fancy"></i> Inserisci articolo</a>
-
-        </div>
-        <div class="col-lg-3">
-          <a href="{{route('posts.index')}}"><i class="far fa-eye"></i> Visualizza articoli</a>
-
-        </div>
-        <div class="col-lg-3">
-
-          <a href="{{route('schedules.create')}}"><i class="far fa-clock"></i> Inserisci orario</a>
-        </div>
-        <div class="col-lg-3">
-          <a href="{{route('schedules.index')}}"><i class="far fa-eye"></i> Visualizza orari</a>
-
-        </div>
-        <div class="col-lg-3">
-          <a href="{{route('hours.create')}}"><i class="far fa-clock"></i> Inserisci fascia oraria</a>
-
-        </div>
-        <div class="col-lg-3">
-          <a href="{{route('hours.index')}}"><i class="far fa-eye"></i> Visualizza fascia oraria</a>
-
-        </div>
       </div>
     </div>
 
