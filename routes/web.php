@@ -27,6 +27,10 @@ Route::get('/rieducazionefunzionale', function () {
     return view('rieducazione_funzionale');
 })->name('rieducazionefunzionale');
 
+Route::get('/personal', function () {
+    return view('personal');
+})->name('personal');
+
 Route::get('/admin', function () {
     return view('admin.index');
 })->name('admin')->middleware('auth');

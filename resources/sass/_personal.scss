@@ -1,0 +1,46 @@
+.header-personal-trainer{
+    background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/img/personal-gym-swim-trainer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    h1{
+      color: white;
+      font-weight: 700;
+    }
+    span{
+      color: $light-orange-sportfly;
+      font-weight: 700;
+    }
+}
+
+.img-personal-trainer{
+  background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/img/personal-swim-trainer.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+}
+
+.txt-rieducazione-funzionale{
+  h1{
+    color: #666;
+    font-weight: 700;
+  }
+  span{
+    color: $blue-sportfly;
+    font-weight: 700;
+  }
+  p{
+    padding: 25px 50px;
+    text-align: justify;
+  }
+}
+
+.img-personal-gym{
+  background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('/img/personal-trainer.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+}

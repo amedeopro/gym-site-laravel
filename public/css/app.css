@@ -11117,7 +11117,7 @@ a.text-dark:focus {
 }
 
 .personal-trainer {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://www.fitnessesport.it/wp-content/uploads/2016/02/personal-trainer-testa.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/personal-gym-swim-trainer.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12015,6 +12015,55 @@ a.text-dark:focus {
   color: #E67D3B;
   margin-left: 10px;
   font-size: 1rem;
+}
+
+.header-personal-trainer {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/personal-gym-swim-trainer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+.header-personal-trainer h1 {
+  color: white;
+  font-weight: 700;
+}
+
+.header-personal-trainer span {
+  color: #E67D3B;
+  font-weight: 700;
+}
+
+.img-personal-trainer {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/personal-swim-trainer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+}
+
+.txt-rieducazione-funzionale h1 {
+  color: #666;
+  font-weight: 700;
+}
+
+.txt-rieducazione-funzionale span {
+  color: #57A2D4;
+  font-weight: 700;
+}
+
+.txt-rieducazione-funzionale p {
+  padding: 25px 50px;
+  text-align: justify;
+}
+
+.img-personal-gym {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/personal-trainer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
 }
 
 * {
