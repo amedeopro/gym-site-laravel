@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-md-12 text-center mt-5 mb-5 titolo-istruttori-fitness">
-        <h1>ISTRUTTORI <span>FITNESS</span></h1>
+        <h1>ISTRUTTORI STAGIONE <span>2018/19</span></h1>
       </div>
     </div>
   </div>

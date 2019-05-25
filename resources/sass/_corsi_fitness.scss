@@ -1,7 +1,6 @@
 .slider-fitness{
     height: 650px;
-    background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6));
-    background-image: url('/img/sportfly-activities.jpg');
+  background:linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/img/sportfly-activities.jpg);
     background-size: cover;
     background-position: 0 30%;
     background-repeat: no-repeat;
@@ -9,6 +8,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    img{
+     max-width: 300px;
+    }
     h1{
       color: white;
       font-size: 47px;

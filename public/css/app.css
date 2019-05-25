@@ -10759,6 +10759,10 @@ a.text-dark:focus {
   text-align: left !important;
 }
 
+.allinea-logo img {
+  max-width: 220px !important;
+}
+
 .pulsanti-header a {
   font-weight: 700 !important;
   font-size: 16px !important;
@@ -11284,8 +11288,7 @@ a.text-dark:focus {
 
 .slider-fitness {
   height: 650px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-  background-image: url("/img/sportfly-activities.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/img/sportfly-activities.jpg);
   background-size: cover;
   background-position: 0 30%;
   background-repeat: no-repeat;
@@ -11293,6 +11296,10 @@ a.text-dark:focus {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.slider-fitness img {
+  max-width: 300px;
 }
 
 .slider-fitness h1 {

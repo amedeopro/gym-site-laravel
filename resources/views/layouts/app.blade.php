@@ -38,7 +38,7 @@
       <div class="container-fluid">
         <div class="row navbar navbar-expand-lg navbar-light bg-light">
           <div class="col-lg-6 col-md-12 allinea-logo">
-            <a class="navbar-brand" href="{{route('home')}}"> <img src="{{asset('img/logo-sportfly-new.png')}}" alt=""> </a>
+            <a class="navbar-brand" href="{{route('home')}}"> <img src="{{asset('img/logo-sportfly-new-big.png')}}" alt=""> </a>
             <div class="col-md12 col-sm-12 text-right">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -70,7 +70,7 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-12 widget-1">
-            <img src="{{ asset('img/big-sportfly-white-new.png') }}" alt="">
+            <img src="{{ asset('img/Logo-sportfly-new-footer.png') }}" alt="">
           </div>
 
           <div class="col-lg-4 col-md-12 widget-2">

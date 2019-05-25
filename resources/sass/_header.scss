@@ -88,6 +88,9 @@
 
 .allinea-logo{
   text-align: left !important;
+  img{
+    max-width: 220px !important;
+  }
 }
 
 .pulsanti-header{
@@ -112,6 +115,7 @@
 .blue-btn{
   color: $blue-sportfly !important;
 }
+
 
 // .orange-pulsante{
 //   background: orange !important;
