@@ -91,6 +91,10 @@
 
           </div>
           <div class="col-lg-4">
+            <a href="{{route('categories.create')}}"><i class="fas fa-dumbbell"></i> Inserisci categoria corso</a>
+
+          </div>
+          <div class="col-lg-4">
             <a href="{{route('posts.create')}}"><i class="fas fa-pen-fancy"></i> Inserisci articolo</a>
 
           </div>
@@ -113,6 +117,10 @@
           <div class="col-lg-4">
 
             <a href="{{route('courses.index')}}"><i class="far fa-eye"></i> Visualizza corsi</a>
+          </div>
+          <div class="col-lg-4">
+
+            <a href="{{route('categories.index')}}"><i class="far fa-eye"></i> Visualizza categorie corsi</a>
           </div>
 
           <div class="col-lg-4">

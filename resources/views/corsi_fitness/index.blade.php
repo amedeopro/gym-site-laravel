@@ -79,6 +79,11 @@
           @method('POST')
 
           <div class="form-group">
+            <label for="namesurname">Nome e Cognome</label>
+            <input type="text" class="form-control" name="namesurname" placeholder="Inserisci il Nome e il tuo Cognome" required>
+          </div>
+
+          <div class="form-group">
             <label for="email">Il tuo indirizzo email</label>
             <input type="text" class="form-control" name="email" placeholder="Inserisci la tua mail" required>
           </div>
