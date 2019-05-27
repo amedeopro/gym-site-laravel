@@ -36,14 +36,6 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-12 col-md-12 visualizza-istruttori">
-        <a href="{{route('trainers.visualizza')}}"><h1>SCOPRI GLI ISTRUTTORI <span>SPORTFLY</span></h1></a>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid">
-    <div class="row">
 
       <div class="col-lg-12 col-md-12 box-corsi-title-sf">
         <h1><span>SPORTFLY</span> ACTIVITIES</h1>
@@ -58,6 +50,14 @@
         </div>
       @endforeach
 
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 visualizza-istruttori">
+        <a href="{{route('trainers.visualizza')}}"><h1>SCOPRI GLI ISTRUTTORI <span>SPORTFLY</span></h1></a>
+      </div>
     </div>
   </div>
 

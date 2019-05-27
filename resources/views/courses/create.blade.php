@@ -32,6 +32,13 @@
               <textarea class="form-control" name="description_course" rows="8" cols="80"></textarea>
             </div>
 
+            @foreach ($categories as $category)
+              <div class="form-check form-check-inline mb-2">
+                <input name="category_id[]" class="form-check-input" type="checkbox" value="{{$category->id}}">
+                <label class="form-check-label" for="category_id">{{$category->category_name}}</label>
+              </div>
+            @endforeach
+
             {{-- @foreach ($days as $day)
               <div class="form-check form-check-inline mb-3">
                 <input name="day_id[]" class="form-check-input" type="checkbox" value="{{$day->id}}">
@@ -39,7 +46,7 @@
               </div>
             @endforeach --}}
 
-            <div class="container mb-5">
+            {{-- <div class="container mb-5">
               <div class="row">
                 <div class="col-lg-4">
                   <span>In quale giorno viene svolto questo corso ?</span>
@@ -69,7 +76,7 @@
                   </select>
                 </div>
               </div>
-            </div>
+            </div> --}}
 
             {{-- @foreach ($days as $day)
               {{dd($day['day'])}}

@@ -9,6 +9,7 @@ use App\Day;
 use App\Hour;
 use App\Trainer;
 use App\Schedule;
+use App\Category;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -65,7 +66,8 @@ class CourseController extends Controller
         $days = Day::all();
         $hours = Hour::all();
         $trainers = Trainer::all();
-        return view('courses.create', compact('dates','days','hours','trainers'));
+        $categories = Category::all();
+        return view('courses.create', compact('dates','days','hours','trainers','categories'));
     }
 
     /**

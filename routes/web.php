@@ -62,6 +62,7 @@ Route::resource('/posts','PostController')->middleware('auth');
 Route::resource('/dates','DateController')->middleware('auth');
 Route::resource('/hours','HourController')->middleware('auth');
 Route::resource('/schedules','ScheduleController')->middleware('auth');
+Route::resource('/categories','CategoryController')->middleware('auth');
 Route::get('/visualizzatrainers', 'TrainerController@trainers_admin')->name('trainers.visualizza');
 Route::get('/visualizzatrainers/{slug}', 'GeneralController@trainer_singolo')->name('trainers.trainer_singolo');
 Route::get('/','PostController@index_home')->name('home');

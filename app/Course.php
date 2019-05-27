@@ -23,4 +23,8 @@ class Course extends Model
   public function hours(){
     return $this->belongsToMany(hour::class)->withTimestamps();
   }
+
+  public function categories(){
+    return $this->belongsToMany(Category::class)->withTimestamps();
+  }
 }
