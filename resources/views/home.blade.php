@@ -85,12 +85,12 @@
       <a href="{{route('corsifitness')}}">scopri di piÙ</a>
     </div>
     <div class="col-lg-3 col-md-12 personal-trainer" data-aos="zoom-in">
-      <h1>Personal</h1>
+      <h1>Lezioni Individuali</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <a href="{{route('personal')}}">scopri di piÙ</a>
     </div>
     <div class="col-lg-3 col-md-12 allenamenti" data-aos="zoom-in">
-      <h1>Rieducazione Funzionale</h1>
+      <h1>Lezioni di Rieducazione Funzionale</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <a href="{{route('rieducazionefunzionale')}}">scopri di piÙ</a>
     </div>

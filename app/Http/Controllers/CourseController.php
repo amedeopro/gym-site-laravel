@@ -136,8 +136,8 @@ class CourseController extends Controller
     public function edit($id)
     {
         $course = Course::find($id);
-        $dates = Date::all();
-        return view('courses.edit', compact('course','dates'));
+        // $dates = Date::all();
+        return view('courses.edit', compact('course'));
     }
 
     /**
@@ -159,7 +159,7 @@ class CourseController extends Controller
 
         $course->update($data);
 
-        $course->dates()->sync($data['date_id']);
+        // $course->dates()->sync($data['date_id']);
 
         return redirect()->route('courses.index');
 
