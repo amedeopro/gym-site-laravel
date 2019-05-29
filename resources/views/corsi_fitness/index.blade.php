@@ -74,7 +74,7 @@
   <div class="container mt-2 mb-5">
     <div class="row">
       <div class="col-lg-12">
-        <form class="form-group" action="{{route('hours.store')}}" method="post" enctype="multipart/form-data">
+        <form class="form-group" action="" method="post" enctype="multipart/form-data">
           @csrf
           @method('POST')
 
