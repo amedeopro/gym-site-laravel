@@ -256,3 +256,22 @@
 .back-orange{
   background: linear-gradient(180deg, #F8FAFC 50%, $light-orange-sportfly 50%);
 }
+
+.categorie-corso{
+  h3{
+    text-transform: uppercase;
+    margin: 25px 0;
+    font-weight: 700;
+  }
+  img{
+    width: 520px;
+    max-height: 320px;
+  }
+  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 3px solid black;
+    color: black;
+    font-weight: 700;
+  }
+}

@@ -18,9 +18,21 @@
     </div>
   </div>
 
-  <div class="container-fluid">
-    <div class="row">
+  <div class="container">
+    <div class="row categorie-corso">
+      @foreach ($categories as $category)
+      <div class="col-lg-6 col-md-12 col-sm-12 mt-5 mb-5">
+        <img src="{{asset('storage/'.$category->category_img)}}" alt="">
+        <h3>{{$category->category_name}}</h3>
+        <p>{{$category->category_dsc}}</p>
+        <a href="#">Scopri di più</a>
+      </div>
+    @endforeach
+    </div>
+  </div>
 
+  {{-- <div class="container-fluid">
+    <div class="row">
       <div class="col-lg-12 col-md-12 box-corsi-title">
         <img src="https://s3.eu-west-1.amazonaws.com/lesmills.fr/_b2b/logos/logo-lm.png" alt="">
       </div>
@@ -51,7 +63,7 @@
       @endforeach
 
     </div>
-  </div>
+  </div> --}}
 
   <div class="container-fluid">
     <div class="row">

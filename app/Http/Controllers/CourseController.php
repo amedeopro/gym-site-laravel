@@ -28,6 +28,7 @@ class CourseController extends Controller
        $dates = Date::wherenotnull('id')->with(['courses'])->get()->toArray();
        $days = Day::all();
        $hours = Hour::all();
+       $categories = Category::all();
 
        //fitness a
        $schedulesLunedi = Schedule::all()->where('day','Lunedì')->where('room','fitness a');
@@ -45,7 +46,7 @@ class CourseController extends Controller
        $schedulesVenerdib = Schedule::all()->where('day','Venerdì')->where('room','fitness b');
        $schedulesSabatob = Schedule::all()->where('day','Sabato')->where('room','fitness b');
 
-       return view('corsi_fitness.index',compact('coursesnolm','courseslm','dates','courses','days','hours','schedulesLunedi','schedulesMartedi','schedulesMercoledi','schedulesGiovedi','schedulesVenerdi','schedulesSabato','schedulesLunedib','schedulesMartedib','schedulesMercoledib','schedulesGiovedib','schedulesVenerdib','schedulesSabatob'));
+       return view('corsi_fitness.index',compact('coursesnolm','courseslm','dates','courses','days','hours','schedulesLunedi','schedulesMartedi','schedulesMercoledi','schedulesGiovedi','schedulesVenerdi','schedulesSabato','schedulesLunedib','schedulesMartedib','schedulesMercoledib','schedulesGiovedib','schedulesVenerdib','schedulesSabatob', 'categories'));
      }
 
     public function index()

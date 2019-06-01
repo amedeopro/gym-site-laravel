@@ -23,6 +23,11 @@
             <input type="text" class="form-control" name="category_name" placeholder="Inserisci il nome della categoria">
           </div>
 
+          <div class="form-group">
+            <label for="category_dsc">Descrizione della categoria</label>
+            <textarea name="category_dsc" rows="8" cols="80" class="form-control"></textarea>
+          </div>
+
 
           <div class="custom-file">
             <input type="file" class="custom-file-input" name="category_img">

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $fillable = ['category_name','category_img'];
+    protected $fillable = ['category_name','category-dsc','category_img'];
 
     public function courses(){
       return $this->belongsToMany(Course::class)->withTimestamps();
