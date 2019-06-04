@@ -68,7 +68,7 @@
         </div>
         <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5">
 
-          <a href="{{ route('courses.edit', $category->id)}}" class="btn btn-warning">MODIFICA</a>
+          <a href="{{route('categories.edit',$category->id)}}" class="btn btn-warning">MODIFICA</a>
 
         </div>
         <div class="col-lg-2 col-md-12 col-sm-12 d-flex justify-content-center align-items-center text-align-center mb-5 mt-5">

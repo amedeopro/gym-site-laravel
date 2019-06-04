@@ -73,7 +73,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::find($id);
+        return view('categories.edit', compact('category'));
     }
 
     /**
@@ -83,9 +84,21 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Category $category)
     {
-        //
+        $data = $request->all();
+
+        $categoryimage = Storage::disk('public')->put('categories', $data['category_img']);
+
+        $data['category_img'] = $categoryimage;
+        $category->category_dsc = $data['category_dsc'];
+
+        // dd($data);
+        $category->update($data);
+
+
+        return redirect()->route('categories.index');
+
     }
 
     /**
@@ -99,5 +112,9 @@ class CategoryController extends Controller
       $category = Category::find($id);
       $category->delete();
       return redirect()->back();
+    }
+
+    public function innercategory($slug){
+      $categories = Category::where('slug',$slug)->with(['courses'])->get()->toArray();
     }
 }
