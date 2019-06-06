@@ -12096,6 +12096,29 @@ a.text-dark:focus {
   height: 350px;
 }
 
+.courses-boxes img {
+  width: 100%;
+  max-height: 225px;
+}
+
+.courses-boxes p {
+  text-align: justify;
+}
+
+.courses-boxes h3 {
+  margin: 15px 0;
+}
+
+.courses-inner-title h1 {
+  font-weight: 700;
+  color: #666;
+}
+
+.courses-inner-title h1 span {
+  color: #E5973C;
+  text-transform: uppercase;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }

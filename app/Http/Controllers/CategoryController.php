@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -48,6 +49,7 @@ class CategoryController extends Controller
       $newCategory->category_name = $data['category_name'];
       $newCategory->category_dsc = $data['category_dsc'];
       $newCategory->category_img = $categoryimage;
+      $newCategory->slug = Str::slug($data['category_name']);
 
       $newCategory->save();
 
@@ -114,7 +116,5 @@ class CategoryController extends Controller
       return redirect()->back();
     }
 
-    public function innercategory($slug){
-      $categories = Category::where('slug',$slug)->with(['courses'])->get()->toArray();
-    }
+
 }

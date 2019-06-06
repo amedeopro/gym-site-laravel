@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Trainer;
 use App\Course;
 use App\Post;
+use App\Category;
 
 class GeneralController extends Controller
 {
@@ -24,5 +25,13 @@ class GeneralController extends Controller
   {
       $posts = Post::where('slug',$slug)->get();
       return view('posts.visualizza_singolo_post',compact('posts'));
+  }
+
+  public function innercategory($slug){
+    $categories = Category::where('slug',$slug)->with(['courses'])->get()->toArray();
+
+    $courses = Course::all();
+
+    return view('innercategory',compact('categories','courses'));
   }
 }

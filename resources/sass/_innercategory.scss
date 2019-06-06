@@ -1,0 +1,23 @@
+.courses-boxes{
+  img{
+    width: 100%;
+    max-height: 225px;
+  }
+  p{
+    text-align: justify;
+  }
+  h3{
+    margin: 15px 0;
+  }
+}
+
+.courses-inner-title{
+  h1{
+    font-weight: 700;
+    color: #666;
+    span{
+      color: $orange-sportfly;
+      text-transform: uppercase;
+    }
+  }
+}

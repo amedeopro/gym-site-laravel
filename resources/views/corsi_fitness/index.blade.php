@@ -25,7 +25,7 @@
         <img src="{{asset('storage/'.$category->category_img)}}" alt="">
         <h3>{{$category->category_name}}</h3>
         <p>{{$category->category_dsc}}</p>
-        <a href="#">Scopri di più</a>
+        <a href="{{route('innercategory', $category->slug)}}">Scopri di più</a>
       </div>
     @endforeach
     </div>
