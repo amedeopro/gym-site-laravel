@@ -21,7 +21,7 @@
           <img src="{{asset('storage/'.$course['logo_course'])}}" alt="">
           <h3>{{$course['name_course']}}</h3>
           <p>{{$course['description_course']}}</p>
-          <a href="#" class="btn btn-info">Scopri di più</a>
+          <a href="{{route('courses.corso_singolo', $course['slug'])}}" class="btn btn-info">Scopri di più</a>
         </div>
       @endforeach
 
