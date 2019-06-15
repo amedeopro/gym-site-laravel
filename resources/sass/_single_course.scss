@@ -26,3 +26,44 @@
       }
   }
 }
+
+.background-single-course-pre-footer{
+  background: $light-orange-sportfly;
+  color: white;
+  padding: 25px 0;
+}
+
+
+.text-single-course-header{
+  h4{
+    text-align: justify;
+    line-height: 30px;
+    font-weight: 300;
+  }
+  h1{
+    font-weight: 700;
+  }
+}
+
+.vantaggi-single-course{
+  h4{
+    text-align: justify;
+    line-height: 30px;
+    font-weight: 300;
+  }
+  h2{
+    text-transform: uppercase;
+  }
+}
+
+.istruttori-corso-singolo{
+a{
+  text-decoration: none;
+  font-weight: 500;
+  color: $orange-sportfly;
+  img{
+    max-width: 100px;
+    border-radius: 100px;
+  }
+}
+}

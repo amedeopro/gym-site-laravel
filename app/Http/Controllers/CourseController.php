@@ -91,6 +91,11 @@ class CourseController extends Controller
         $newCourse->name_course = $data['name_course'];
         $newCourse->lesmills = $data['lesmills'];
         $newCourse->description_course = $data['description_course'];
+        $newCourse->vantaggi = $data['vantaggi'];
+        $newCourse->beneficio1 = $data['beneficio1'];
+        $newCourse->beneficio2 = $data['beneficio2'];
+        $newCourse->beneficio3 = $data['beneficio3'];
+        $newCourse->principiante = $data['principiante'];
         $newCourse->logo_course = $image;
         $newCourse->bg_image = $bgimage;
         $newCourse->slug = Str::slug($data['name_course']);

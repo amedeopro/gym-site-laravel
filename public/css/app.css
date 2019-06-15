@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -11972,6 +11972,43 @@ a.text-dark:focus {
   color: #E5973C;
 }
 
+.background-single-course-pre-footer {
+  background: #E67D3B;
+  color: white;
+  padding: 25px 0;
+}
+
+.text-single-course-header h4 {
+  text-align: justify;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.text-single-course-header h1 {
+  font-weight: 700;
+}
+
+.vantaggi-single-course h4 {
+  text-align: justify;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.vantaggi-single-course h2 {
+  text-transform: uppercase;
+}
+
+.istruttori-corso-singolo a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #E5973C;
+}
+
+.istruttori-corso-singolo a img {
+  max-width: 100px;
+  border-radius: 100px;
+}
+
 .header-rieducazione-funzionale {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/rieducazione-funzionale-palestra.jpg");
   background-size: cover;
@@ -12117,6 +12154,21 @@ a.text-dark:focus {
 .courses-inner-title h1 span {
   color: #E5973C;
   text-transform: uppercase;
+}
+
+.pulsante-innercat a {
+  text-decoration: none;
+  color: white;
+  background: #E5973C;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.pulsante-innercat a:hover {
+  background: white;
+  border: 2px solid #E5973C;
+  color: #E5973C;
 }
 
 * {

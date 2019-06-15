@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
-  protected $fillable = ['name_course','lesmills','description_course','logo_course','slug','bg_image'];
+  protected $fillable = ['name_course','lesmills','description_course','logo_course','slug','bg_image', 'vantaggi', 'beneficio1','beneficio2','beneficio3','principiante'];
 
   public function trainers(){
     return $this->belongsToMany(Trainer::class)->withTimestamps();

@@ -20,8 +20,10 @@
         <div class="col-lg-4 col-md-12 col-sm-12 mt-5 mb-5 courses-boxes">
           <img src="{{asset('storage/'.$course['logo_course'])}}" alt="">
           <h3>{{$course['name_course']}}</h3>
-          <p>{{$course['description_course']}}</p>
-          <a href="{{route('courses.corso_singolo', $course['slug'])}}" class="btn btn-info">Scopri di più</a>
+          <p>{{Str::words($course['description_course'],50)}}</p>
+          <div class="pulsante-innercat text-center">
+            <a href="{{route('courses.corso_singolo', $course['slug'])}}">Scopri di più</a>
+          </div>
         </div>
       @endforeach
 

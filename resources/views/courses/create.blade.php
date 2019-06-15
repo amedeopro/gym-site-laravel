@@ -32,6 +32,40 @@
               <textarea class="form-control" name="description_course" rows="8" cols="80"></textarea>
             </div>
 
+            <div class="form-group">
+              <label for="vantaggi">Vantaggi</label>
+              <textarea class="form-control" name="vantaggi" rows="8" cols="80"></textarea>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label for="beneficio1">Beneficio 1</label>
+                  <textarea class="form-control" name="beneficio1" rows="8" cols="80"></textarea>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label for="beneficio2">Beneficio 2</label>
+                  <textarea class="form-control" name="beneficio2" rows="8" cols="80"></textarea>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+
+                <div class="form-group">
+                  <label for="beneficio3">Beneficio 3</label>
+                  <textarea class="form-control" name="beneficio3" rows="8" cols="80"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="principiante">Principiante</label>
+              <textarea class="form-control" name="principiante" rows="8" cols="80"></textarea>
+            </div>
+
             @foreach ($categories as $category)
               <div class="form-check form-check-inline mb-2">
                 <input name="category_id[]" class="form-check-input" type="checkbox" value="{{$category->id}}">

@@ -21,3 +21,19 @@
     }
   }
 }
+
+.pulsante-innercat{
+  a{
+    text-decoration: none;
+    color: white;
+    background: $orange-sportfly;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  a:hover{
+    background: white;
+    border: 2px solid $orange-sportfly;
+    color: $orange-sportfly;
+  }
+}

@@ -18,6 +18,11 @@ class CreateCoursesTable extends Migration
             $table->string('name_course');
             $table->string('lesmills');
             $table->text('description_course');
+            $table->text('vantaggi');
+            $table->text('beneficio1');
+            $table->text('beneficio2');
+            $table->text('beneficio3');
+            $table->text('principiante');
             $table->string('logo_course');
             $table->string('bg_image');
             $table->string('slug');
