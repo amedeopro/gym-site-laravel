@@ -67,6 +67,7 @@ Route::get('/visualizzatrainers', 'TrainerController@trainers_admin')->name('tra
 Route::get('/visualizzatrainers/{slug}', 'GeneralController@trainer_singolo')->name('trainers.trainer_singolo');
 Route::get('/','PostController@index_home')->name('home');
 Route::get('/corsifitness', 'CourseController@visualizza_corsi')->name('corsifitness');
+Route::post('/corsifitness/conferma', 'ContactController@richiesta_orari')->name('richiestaorari');
 Route::get('/corsifitness/{slug}', 'CourseController@corso_singolo')->name('courses.corso_singolo');
 Route::get('/posts/sg/{slug}','GeneralController@visualizza_post_singolo')->name('posts.visualizza_singolo_post');
 Route::get('/cat/{slug}', 'GeneralController@innercategory')->name('innercategory');

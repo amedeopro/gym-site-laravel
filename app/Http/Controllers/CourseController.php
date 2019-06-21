@@ -21,6 +21,10 @@ class CourseController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+     /*Inserire function per invio richiesta info corsi*/
+
+
+
      public function visualizza_corsi(){
        $coursesnolm = Course::all()->where('lesmills','0');
        $courseslm = Course::all()->where('lesmills','1');
@@ -82,8 +86,8 @@ class CourseController extends Controller
         $data = $request->all();
 
         // if (!empty($data['logo_course'])){
-        $image = Storage::disk('public')->put('courses', $data['logo_course']);
-        $bgimage = Storage::disk('public')->put('courses/background', $data['bg_image']);
+        // $image = Storage::disk('public')->put('courses', $data['logo_course']);
+        // $bgimage = Storage::disk('public')->put('courses/background', $data['bg_image']);
         // }
 
         $newCourse = New Course();
@@ -96,8 +100,17 @@ class CourseController extends Controller
         $newCourse->beneficio2 = $data['beneficio2'];
         $newCourse->beneficio3 = $data['beneficio3'];
         $newCourse->principiante = $data['principiante'];
-        $newCourse->logo_course = $image;
-        $newCourse->bg_image = $bgimage;
+
+        if (!empty($data['logo_course']) ) {
+          $image = Storage::disk('public')->put('courses', $data['logo_course']);
+          $newCourse->logo_course = $image;
+        }
+
+        if (!empty($data['bg_image'])) {
+          $bgimage = Storage::disk('public')->put('courses/background', $data['bg_image']);
+          $newCourse->bg_image = $bgimage;
+        }
+
         $newCourse->slug = Str::slug($data['name_course']);
 
         $newCourse->save();
@@ -105,9 +118,9 @@ class CourseController extends Controller
         //$newCourse->day()->attach($data['date_id']);
 
          // if (!empty($data['day_id']) & !empty($data['hour_id'])) {
-          $newCourse->days()->attach($data['day_id']);
-          $newCourse->hours()->attach($data['hour_id']);
-          $newCourse->trainers()->attach($data['trainer_id']);
+          // $newCourse->days()->attach($data['day_id']);
+          // $newCourse->hours()->attach($data['hour_id']);
+          // $newCourse->trainers()->attach($data['trainer_id']);
          // }
 
 
@@ -157,11 +170,22 @@ class CourseController extends Controller
     {
         $data = $request->all();
 
-        $image = Storage::disk('public')->put('courses', $data['logo_course']);
-        $bgimage = Storage::disk('public')->put('courses/background', $data['bg_image']);
+        // $image = Storage::disk('public')->put('courses', $data['logo_course']);
+        // $bgimage = Storage::disk('public')->put('courses/background', $data['bg_image']);
+        //
+        // $data['logo_course'] = $image;
+        // $data['bg_image'] = $bgimage;
 
-        $data['logo_course'] = $image;
-        $data['bg_image'] = $bgimage;
+
+        if (!empty($data['logo_course'])) {
+          $image = Storage::disk('public')->put('courses', $data['logo_course']);
+         $data['logo_course'] = $image;
+        }
+
+        if (!empty($data['bg_image'])) {
+          $bgimage = Storage::disk('public')->put('courses/background', $data['bg_image']);
+          $data['bg_image'] = $bgimage;
+        }
 
         $course->update($data);
 

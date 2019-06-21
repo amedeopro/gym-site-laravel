@@ -83,10 +83,19 @@
     </div>
   </div>
 
+
+  @if (!empty($message))
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        {{$message}}
+      </div>
+    </div>
+  @endif
+
   <div class="container mt-2 mb-5">
     <div class="row">
       <div class="col-lg-12">
-        <form class="form-group" action="" method="post" enctype="multipart/form-data">
+        <form class="form-group" action="{{route('richiestaorari')}}" method="post" enctype="multipart/form-data">
           @csrf
           @method('POST')
 
@@ -106,11 +115,11 @@
           </div>
 
           <div class="form-group">
-            <label for="object">Di quali orari hai bisogno?</label>
-            <select class="form-control">
-              <option>Fitness</option>
-              <option>Nuoto</option>
-              <option>Tutti gli orari</option>
+            <label for="schedule">Di quali orari hai bisogno?</label>
+            <select name="schedule" class="form-control">
+              <option value="fitness">Fitness</option>
+              <option value="nuoto">Nuoto</option>
+              <option value="tutti">Tutti gli orari</option>
             </select>
           </div>
 
