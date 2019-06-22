@@ -56,7 +56,6 @@ class TrainerController extends Controller
         $name = $data['name'];
         $fullname = $name.$data['surname'];
 
-        $image = Storage::disk('public')->put('trainers', $data['image']);
 
         $newTrainer = New Trainer();
 
@@ -64,9 +63,11 @@ class TrainerController extends Controller
         $newTrainer->surname = $data['surname'];
         $newTrainer->description = $data['description'];
         $newTrainer->slug = Str::slug($fullname);
-        $newTrainer->image = $image;
 
-
+        if(!empty($data['image'])){
+          $image = Storage::disk('public')->put('trainers', $data['image']);
+          $newTrainer->image = $image;
+        }
 
         $newTrainer->save();
 
@@ -122,8 +123,11 @@ class TrainerController extends Controller
     {
       $data = $request->all();
 
-      $image = Storage::disk('public')->put('trainers', $data['image']);
-      $data['image'] = $image;
+      if(!empty($data['image'])){
+        $image = Storage::disk('public')->put('trainers', $data['image']);
+        $data['image'] = $image;
+      }
+
 
       $trainer->update($data);
 

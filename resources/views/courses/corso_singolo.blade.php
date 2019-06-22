@@ -6,82 +6,98 @@
 
 
 @foreach ($courses as $course)
-  <div class="container mt-5 mb-5">
-    <div class="row">
-      <div class="col-lg-12 text-single-course-header">
-              <h1 class="mt-5 mb-5 text-center">{{$course['name_course']}}</h1>
-              <h4>{{$course['description_course']}}</h4>
-      </div>
-    </div>
-  </div>
 
-  <div class="container-fluid">
-    <div class="row" style="background:url({{asset('storage/'.$course['bg_image'])}}); background-position: center; background-size: cover; height:500px;">
-      <div class="col-lg-12">
-
-      </div>
-
-    </div>
-  </div>
-
-  <div class="container mt-5 mb-5">
-    <div class="row">
-      <div class="col-lg-12 vantaggi-single-course">
-      <h2 class="text-center">I VANTAGGI DI {{$course['name_course']}}</h2>
-      <h4>{{$course['vantaggi']}} </h4>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid background-single-course-pre-footer">
-    <div class="row">
-      <div class="col-lg-12 mt-5">
-        <h3 class="text-center" style="text-transform: uppercase;">I BENEFICI DI {{$course['name_course']}}</h3>
-      </div>
-      
-      <div class="container mt-3">
-        <div class="row text-center">
-          <div class="col-lg-4 col-md-12 col-sm-12">
-            <h6><i class="far fa-check-circle"></i> {{$course['beneficio1']}}</h6>
-          </div>
-          <div class="col-lg-4 col-md-12 col-sm-12">
-            <h6><i class="far fa-check-circle"></i> {{$course['beneficio2']}}</h6>
-          </div>
-          <div class="col-lg-4 col-md-12 col-sm-12">
-            <h6><i class="far fa-check-circle"></i> {{$course['beneficio3']}}</h6>
-          </div>
+  @if (!empty($course['name_course']))
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-lg-12 text-single-course-header">
+          <h1 class="mt-5 mb-5 text-center">{{$course['name_course']}}</h1>
+          <h4>{{$course['description_course']}}</h4>
         </div>
       </div>
+    </div>
+  @endif
 
-      <div class="container mt-5 mb-5">
-        <div class="row">
-          <div class="col-lg-12">
-            <h3 class="text-center">SIETE PRINCIPIANTI ?</h3>
-            <p>{{$course['principiante']}}</p>
-          </div>
+  @if (!empty($course['bg_image']))
+    <div class="container-fluid">
+      <div class="row" style="background:url({{asset('storage/'.$course['bg_image'])}}); background-position: center; background-size: cover; height:500px;">
+        <div class="col-lg-12">
         </div>
       </div>
-
     </div>
-  </div>
+  @endif
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h3 class="text-center mb-5 mt-5">CHI SEGUIRA LE TUE LEZIONI ?</h3>
+  @if (!empty($course['vantaggi']))
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-lg-12 vantaggi-single-course">
+          <h2 class="text-center">I VANTAGGI DI {{$course['name_course']}}</h2>
+          <h4>{{$course['vantaggi']}} </h4>
+        </div>
       </div>
     </div>
-  </div>
+  @endif
 
-  <div class="container mb-5">
-    <div class="row">
-      @foreach ($course['trainers'] as $value)
-      <div class="col-lg-4 col-md-12 col-sm12 text-center istruttori-corso-singolo">
-        <a class="istruttore-su-corsi" href="{{route('trainers.trainer_singolo', $value['slug'])}}"><img class="mr-3" src="{{asset('storage/'.$value['image'])}}" alt="">{{$value['name']}} {{$value['surname']}}</a>
+  @if (!empty($course['name_course']))
+    <div class="container-fluid background-single-course-pre-footer">
+      <div class="row pl-0 pr-0">
+        <div class="col-lg-12 mt-5">
+          <h3 class="text-center" style="text-transform: uppercase;">I BENEFICI DI {{$course['name_course']}}</h3>
+        </div>
+  @endif
+
+  @if (!empty($course['beneficio1'] || $course['beneficio2'] || $course['beneficio3']))
+    <div class="container mt-3">
+      <div class="row text-center">
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <h6><i class="far fa-check-circle"></i> {{$course['beneficio1']}}</h6>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <h6><i class="far fa-check-circle"></i> {{$course['beneficio2']}}</h6>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <h6><i class="far fa-check-circle"></i> {{$course['beneficio3']}}</h6>
+        </div>
       </div>
-    @endforeach
+    </div>
+  @endif
+
+  @if (!empty($course['principiante']))
+    <div class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="text-center">SIETE PRINCIPIANTI ?</h3>
+          <p>{{$course['principiante']}}</p>
+        </div>
+      </div>
+    </div>
+
+  @endif
+</div>
+</div>
+
+
+  @if (!empty($course['trainers']))
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="text-center mb-5 mt-5">CHI SEGUIRÀ LE TUE LEZIONI ?</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-5">
+      <div class="row">
+        @foreach ($course['trainers'] as $value)
+          <div class="col-lg-4 col-md-12 col-sm12 text-center istruttori-corso-singolo">
+            <a class="istruttore-su-corsi" href="{{route('trainers.trainer_singolo', $value['slug'])}}"><img class="mr-3" src="{{asset('storage/'.$value['image'])}}" alt="">{{$value['name']}} {{$value['surname']}}</a>
+          </div>
+        @endforeach
     </div>
   </div>
+
+  @endif
+
 @endforeach
 
 

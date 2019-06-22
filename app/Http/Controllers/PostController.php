@@ -46,14 +46,17 @@ class PostController extends Controller
     public function store(Request $request)
     {
       $data = $request->all();
-      $image = Storage::disk('public')->put('posts', $data['image_post']);
 
       $newPost = New Post();
 
       $newPost->title = $data['title'];
       $newPost->content = $data['content'];
-      $newPost->image_post = $image;
       $newPost->slug = Str::slug($data['title']);
+
+      if(!empty($data['image_post'])){
+        $image = Storage::disk('public')->put('posts', $data['image_post']);
+        $newPost->image_post = $image;
+      }
 
       $newPost->save();
 
@@ -94,8 +97,11 @@ class PostController extends Controller
     {
       $data = $request->all();
 
-      $image = Storage::disk('public')->put('posts', $data['image_post']);
-      $data['image_post'] = $image;
+
+      if(!empty($data['image_post'])){
+        $image = Storage::disk('public')->put('posts', $data['image_post']);
+        $data['image_post'] = $image;
+      }
 
       $post->update($data);
 

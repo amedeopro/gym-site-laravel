@@ -48,8 +48,14 @@ class CategoryController extends Controller
 
       $newCategory->category_name = $data['category_name'];
       $newCategory->category_dsc = $data['category_dsc'];
-      $newCategory->category_img = $categoryimage;
       $newCategory->slug = Str::slug($data['category_name']);
+
+
+      if(!empty($data['category_img'])){
+        $categoryimage = Storage::disk('public')->put('categories', $data['category_img']);
+        $newCategory->category_img = $categoryimage;
+
+      }
 
       $newCategory->save();
 
@@ -90,10 +96,13 @@ class CategoryController extends Controller
     {
         $data = $request->all();
 
-        $categoryimage = Storage::disk('public')->put('categories', $data['category_img']);
 
-        $data['category_img'] = $categoryimage;
         $category->category_dsc = $data['category_dsc'];
+
+        if(!empty($data['category_img'])){
+          $categoryimage = Storage::disk('public')->put('categories', $data['category_img']);
+          $data['category_img'] = $categoryimage;
+        }
 
         // dd($data);
         $category->update($data);
