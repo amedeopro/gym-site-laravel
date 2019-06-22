@@ -101,6 +101,11 @@ class CourseController extends Controller
         $newCourse->beneficio3 = $data['beneficio3'];
         $newCourse->principiante = $data['principiante'];
 
+        if (!empty($data['copertina']) ) {
+          $image = Storage::disk('public')->put('courses', $data['copertina']);
+          $newCourse->copertina = $image;
+        }
+
         if (!empty($data['logo_course']) ) {
           $image = Storage::disk('public')->put('courses', $data['logo_course']);
           $newCourse->logo_course = $image;
@@ -176,6 +181,10 @@ class CourseController extends Controller
         // $data['logo_course'] = $image;
         // $data['bg_image'] = $bgimage;
 
+        if (!empty($data['copertina'])) {
+          $image = Storage::disk('public')->put('courses', $data['copertina']);
+         $data['copertina'] = $image;
+        }
 
         if (!empty($data['logo_course'])) {
           $image = Storage::disk('public')->put('courses', $data['logo_course']);

@@ -100,13 +100,13 @@
     <div class="col-lg-4 col-md-12 col-sm-12 box-nuoto">
       <h1>CONOSCI GLI ISTRUTTORI</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <a href="#">SCOPRI GLI ISTRUTTORI DI NUOTO</a>
+      <a href="{{route('trainers.visualizza')}}">SCOPRI GLI ISTRUTTORI</a>
     </div>
 
     <div class="col-lg-4 col-md-12 col-sm-12 box-nuoto">
       <h1>CHIEDICI MAGGIORI INFORMAZIONI</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <a href="#">CHIEDI MAGGIORI INFORMAZIONI</a>
+      <a href="{{route('contatti')}}">CHIEDI MAGGIORI INFORMAZIONI</a>
     </div>
 
   </div>

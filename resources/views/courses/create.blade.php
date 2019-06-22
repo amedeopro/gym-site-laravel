@@ -164,6 +164,11 @@
               </div>
             @endforeach --}}
 
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" name="copertina">
+              <label class="custom-file-label" for="copertina">Scegli la copertina</label>
+              <div class="invalid-feedback"><strong>N.B.</strong> dimensione consigliata 160px x 160px</div>
+            </div>
 
             <div class="custom-file">
               <input type="file" class="custom-file-input" name="logo_course">

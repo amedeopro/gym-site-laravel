@@ -72,12 +72,22 @@
             @endforeach --}}
 
             <div class="form-group">
+              <img src="{{asset('storage/'.$course->copertina)}}" alt="">
+            </div>
+
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" name="copertina">
+              <label class="custom-file-label" for="copertina">Modifica la copertina</label>
+              <div class="invalid-feedback"><strong>N.B.</strong> dimensione consigliata 160px x 160px</div>
+            </div>
+
+            <div class="form-group">
               <img src="{{asset('storage/'.$course->logo_course)}}" alt="">
             </div>
 
             <div class="custom-file">
               <input type="file" class="custom-file-input" name="logo_course">
-              <label class="custom-file-label" for="logo_course">Scegli un'immagine</label>
+              <label class="custom-file-label" for="logo_course">Modifica il logo</label>
               <div class="invalid-feedback"><strong>N.B.</strong> dimensione consigliata 160px x 160px</div>
             </div>
 
@@ -87,7 +97,7 @@
 
             <div class="custom-file">
               <input type="file" class="custom-file-input" name="bg_image">
-              <label class="custom-file-label" for="bg_image">Scegli un'immagine</label>
+              <label class="custom-file-label" for="bg_image">Modifica il background</label>
               <div class="invalid-feedback"><strong>N.B.</strong> dimensione consigliata 160px x 160px</div>
             </div>
 
