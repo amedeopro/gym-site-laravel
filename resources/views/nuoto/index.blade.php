@@ -99,13 +99,13 @@
 
     <div class="col-lg-4 col-md-12 col-sm-12 box-nuoto">
       <h1>CONOSCI GLI ISTRUTTORI</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Scoprti gli istruttori di nuoto e fitness di questa stagione</p>
       <a href="{{route('trainers.visualizza')}}">SCOPRI GLI ISTRUTTORI</a>
     </div>
 
     <div class="col-lg-4 col-md-12 col-sm-12 box-nuoto">
       <h1>CHIEDICI MAGGIORI INFORMAZIONI</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Hai informazioni da richiedere ? non esitare a contattarci, il nostro STAFF sarà lieto di rispondere a tutte le tue domande relative a corsi, orari e servizi.</p>
       <a href="{{route('contatti')}}">CHIEDI MAGGIORI INFORMAZIONI</a>
     </div>
 

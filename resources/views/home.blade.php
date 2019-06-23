@@ -81,22 +81,22 @@
   <div class="row mr-0 overflow-hidden">
     <div class="col-lg-3 col-md-12 gruppo" data-aos="zoom-in">
       <h1>AttivitÀ di gruppo</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Decine di lezioni ogni giorno e molteplici discipline...scoprile subito!</p>
       <a href="{{route('corsifitness')}}">scopri di piÙ</a>
     </div>
     <div class="col-lg-3 col-md-12 personal-trainer" data-aos="zoom-in">
       <h1>Lezioni Individuali</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Affidati all'esperienza degli istruttori Sportfly per le tue lezioni individuali</p>
       <a href="{{route('personal')}}">scopri di piÙ</a>
     </div>
     <div class="col-lg-3 col-md-12 allenamenti" data-aos="zoom-in">
       <h1>Lezioni di Rieducazione Funzionale</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Traumi muscolari, Scopri le nostre lezioni di rieducazione funzionale, in palestra e in acqua</p>
       <a href="{{route('rieducazionefunzionale')}}">scopri di piÙ</a>
     </div>
     <div class="col-lg-3 col-md-12 nuoto" data-aos="zoom-in">
       <h1>Nuoto</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Il nuoto è uno degli sport più completi dal punto di vista del coinvolgimento muscolare e, nello stesso tempo, il meno traumatico. Per questo motivo è tra le attività fisiche particolarmente consigliate.</p>
       <a href="{{route('nuoto')}}">scopri di piÙ</a>
     </div>
   </div>
@@ -115,24 +115,28 @@
   </div>
 </div>
 
-<div class="container-fluid mb-5 mt-5">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 text-center news">
-      <h1>NEWS</h1>
+@if (!empty($post))
+  <div class="container-fluid mb-5 mt-5">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 text-center news">
+        <h1>NEWS</h1>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    @foreach ($posts as $post)
-      <div class="col-lg-4 col-md-12 col-sm-12 news-box mb-5">
-        <img src="{{asset('storage/'.$post->image_post)}}" alt="">
-        <h5>{{$post->title}}</h5>
-        <p>{!!Str::words($post->content, 20)!!}</p>
-        <a href="{{route('posts.visualizza_singolo_post', $post->slug)}}" class="btn-blog-sportfly">Leggi</a>
-      </div>
-    @endforeach
+  <div class="container">
+    <div class="row">
+      @foreach ($posts as $post)
+        <div class="col-lg-4 col-md-12 col-sm-12 news-box mb-5">
+          <img src="{{asset('storage/'.$post->image_post)}}" alt="">
+          <h5>{{$post->title}}</h5>
+          <p>{!!Str::words($post->content, 20)!!}</p>
+          <a href="{{route('posts.visualizza_singolo_post', $post->slug)}}" class="btn-blog-sportfly">Leggi</a>
+        </div>
+      @endforeach
+    </div>
   </div>
-</div>
+@endif
+
+
 @endsection

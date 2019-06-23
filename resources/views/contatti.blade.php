@@ -66,6 +66,14 @@
 
     {!! $map['html'] !!}
 
+    @if (!empty($message))
+      <div class="container mt-3">
+        <div class="alert alert-success" role="alert">
+          {{$message}}
+        </div>
+      </div>
+    @endif
+
     <div class="container mt-5 mb-3">
       <div class="row">
         <div class="col-lg-4 col-md-12 col-sm-12 logo-contatti text-center d-flex justify-content-center align-items-center">
@@ -88,13 +96,18 @@
     <div class="container mt-5 mb-5">
       <div class="row">
         <div class="col-lg-12">
-          <form class="form-group" action="{{route('hours.store')}}" method="post" enctype="multipart/form-data">
+          <form class="form-group" action="{{route('richiestacontatti')}}" method="post" enctype="multipart/form-data">
               @csrf
               @method('POST')
 
               <div class="form-group">
+                <label for="name">Nome e Cognome</label>
+                <input type="text" class="form-control" name="name" placeholder="Inserisci il tuo nome e il tuo cognome" required>
+              </div>
+
+              <div class="form-group">
                 <label for="email">Il tuo indirizzo email</label>
-                <input type="text" class="form-control" name="email" placeholder="Inserisci la tua mail" required>
+                <input type="email" class="form-control" name="email" placeholder="Inserisci la tua mail" required>
               </div>
 
               <div class="form-group">
@@ -104,7 +117,7 @@
 
               <div class="form-group">
                 <label for="object">Per cosa ci contatti</label>
-                <input type="text" class="form-control" name="object" placeholder="Oggetto">
+                <input type="text" class="form-control" name="object" placeholder="Oggetto" required>
               </div>
 
               <div class="form-group">

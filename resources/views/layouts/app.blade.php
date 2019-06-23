@@ -87,8 +87,8 @@
               <h2>Menu</h2>
               <a href="#">Privacy Policy</a>
               <a href="#">Cookie Policy</a>
-              <a href="#">Fitness</a>
-              <a href="#">Nuoto</a>
+              <a href="{{route('corsifitness')}}">Fitness</a>
+              <a href="{{route('nuoto')}}">Nuoto</a>
             </div>
           </div>
 

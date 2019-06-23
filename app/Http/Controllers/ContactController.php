@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Informations;
+use App\Contact;
 use App\Course;
 use App\Date;
 use App\Day;
@@ -13,9 +14,47 @@ use App\Schedule;
 use App\Category;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Mailinfo;
+use App\Mail\Contactinfo;
 
 class ContactController extends Controller
 {
+
+  public function richiesta_contatti(Request $request){
+
+    $config['center'] = '41.710657,13.604054';
+    $config['zoom'] = '16';
+    //$config['width'] = '500';
+    $config['scrollwheel'] = false;
+    // $config['position'] = ;
+
+    \GMaps::initialize($config);
+
+  //se ne possono mettere molteplici di marker basta copiare da 44 a 48
+    // $marker['position'] = '41.710657,13.604054';
+    $marker['infowindows_content'] = 'mettere del testo';
+    \GMaps::add_marker($marker);
+
+    $map = \GMaps::create_map();
+
+    $data = $request->all();
+
+    $newContact = new Contact();
+
+    $newContact->name = $data['name'];
+    $newContact->email = $data['email'];
+    $newContact->phone = $data['phone'];
+    $newContact->object = $data['object'];
+    $newContact->message = $data['message'];
+    $newContact->privacy = $data['privacy'];
+
+    $newContact->save();
+
+    $message = "Grazie per averci contattati, il nostro STAFF ti risponderà quanto prima.";
+
+    Mail::to('amedeopro@me.com')->send(new Contactinfo($newContact));
+
+    return view('contatti', compact('message'))->with('map', $map);
+  }
 
   public function richiesta_orari(Request $request){
     $coursesnolm = Course::all()->where('lesmills','0');
